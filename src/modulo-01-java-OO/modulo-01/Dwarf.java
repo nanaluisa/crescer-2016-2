@@ -1,17 +1,18 @@
-public class Dwarves{
-   private int vida;
-   public Dwarves(){
-       vida = 110;
+public class Dwarf{
+   private int vida = 110;
+      
+   public void perdeVida(){
+       vida -= 10;
    }
+   
+   /*public Dwarf(){
+       vida = 110;
+   }*/ 
     
    public int getVida(){
        return vida;
    }
-   
-   public void setVida(int nVida){
-       vida = nVida;
-   }
-   
+      
    /*
         Elfos caçam Dwarves!
 

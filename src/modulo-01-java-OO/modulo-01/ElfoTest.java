@@ -9,7 +9,7 @@ public class ElfoTest{
         //Arrange
         String nomeEsperado = "Bruce Wayne";
         //Act
-        Elfo elfoDoTeste = new Elfo(nomeEsperado,2);
+        Elfo elfoDoTeste = new Elfo(nomeEsperado);
         //Assert    
         assertEquals(nomeEsperado, elfoDoTeste.getNome());
     }
@@ -18,40 +18,123 @@ public class ElfoTest{
     public void elfoNasceComArco(){
         //Arrange
         //Item arco = new Item("Arco",1);
+        int nPadrao = 1;
         //Act
-        Elfo elfoDoTeste = new Elfo ("Elfinho",2);
+        Elfo elfoDoTeste = new Elfo ("Elfinho");
         //Assert    
         assertEquals("Arco", elfoDoTeste.getArco().getDescricao());
-        
+        assertEquals(nPadrao, elfoDoTeste.getArco().getQuantidade());
     }
     
     @Test
-    public void elfoNasceComFlechas(){
+    public void elfoNasceCom42Flechas(){
         //Arrange
         int nPadrao = 42;
         //Act
-        Elfo elfoDoTeste = new Elfo ("Elf",2);
+        Elfo elfoDoTeste = new Elfo ("Elf");
         //Assert    
+        assertEquals("Flechas", elfoDoTeste.getFlecha().getDescricao());
         assertEquals(nPadrao, elfoDoTeste.getFlecha().getQuantidade());
     
     }
-    /*
+    
     @Test
-    public void elfoAtiraFlechasN4(){
+    public void elfoAtira1Flecha(){
         //Arrange
+        Elfo elfoDoTeste = new Elfo ("Elf");
+        //Act
+         elfoDoTeste.atirarFlecha(new Dwarf());
+        //Assert    
+        assertEquals(41, elfoDoTeste.getFlecha().getQuantidade());
+        assertEquals(1, elfoDoTeste.getExperiencia());
+    }
+    
+    @Test
+    public void elfoAtira2Flechas(){
+        //Arrange
+        Elfo elfoDoTeste = new Elfo ("Elf");
+        //Act
+         elfoDoTeste.atirarFlecha(new Dwarf());
+         elfoDoTeste.atirarFlecha(new Dwarf());
+        //Assert    
+        assertEquals(40, elfoDoTeste.getFlecha().getQuantidade());
+        assertEquals(2, elfoDoTeste.getExperiencia());
+    }
+    
+    @Test
+    public void elfoAtira1FlechaEmUmDwarf(){
+        //Arrange
+        Elfo elfoDoTeste = new Elfo ("Elf");
+        //Act
+        Dwarf balin = new Dwarf();
+        elfoDoTeste.atirarFlecha(balin);
+        //Assert    
+        assertEquals(41, elfoDoTeste.getFlecha().getQuantidade());
+        assertEquals(1, elfoDoTeste.getExperiencia());
+        assertEquals(100, balin.getVida());
+    }
+    
+    
+     @Test
+    public void elfoNaoAtiraFlechas(){
+        Elfo elfoDoTeste = new Elfo ("Elfii");
+        //Assert    
+        assertEquals(42, elfoDoTeste.getFlecha().getQuantidade());
+        assertEquals(0, elfoDoTeste.getExperiencia());
+    }
+    
+     @Test
+    public void exibeDadosDoElfo(){
+        Elfo elfo = new Elfo ("Legolas");
+        //Assert   
+        assertEquals("Legolas possui 42 flechas e 0 nível de experiência.", elfo.toString());       
+    }
+    
+    @Test
+    public void criarElfoCom5Flechas(){
+        Elfo elfo = new Elfo ("Elfo", 5);
+        //Assert   
+        assertEquals("Elfo", elfo.getNome());       
+        assertEquals(5, elfo.getFlecha().getQuantidade());
+    }
+    
+    @Test
+    public void criarElfoCom50Flechas(){
+        Elfo elfo = new Elfo ("Elfo", 50);
+              
+        //Assert   
+        assertEquals("Elfo", elfo.getNome());       
+        assertEquals(5420, elfo.getFlecha().getQuantidade());
+    }
+    
+    @Test
+    public void criarElfoCom500Flechas(){
+        Elfo elfo = new Elfo ("Elfo", 500);
+              
+        //Assert   
+        assertEquals("Elfo", elfo.getNome());       
+        assertEquals(42, elfo.getFlecha().getQuantidade());
+    }
+    
+    
+    
+    
+    /*@Test
+    public void elfoAtira4Flechas(){
+        //Arrange
+        Elfo elfoDoTeste = new Elfo ("Elf");
         int nflechasRestantes = 38;
         int n = 4;
         //Act
-        Elfo elfoDoTeste = new Elfo ("Elfii");
         for(int i=0; i< n; i++){
             elfoDoTeste.atirarFlecha();
         }
         //Assert    
         assertEquals(nflechasRestantes, elfoDoTeste.getFlecha().getQuantidade());
-    }
-    
+    }*/
+    /*
     @Test
-    public void elfoNaoAtiraFlechas(){
+    public void elfoNaoAtiraFlechas() {
         //Arrange
         int nflechasRestantes = 42;
         int n = 0;
@@ -59,13 +142,13 @@ public class ElfoTest{
         //Act
         Elfo elfoDoTeste = new Elfo ("Elfii");
         for(int i=0; i< n; i++){
-            elfoDoTeste.atirarFlecha();
+            elfoDoTeste.atirarFlecha(new Dwarf());
         }
         //Assert    
         assertEquals(nflechasRestantes, elfoDoTeste.getFlecha().getQuantidade());
         assertEquals(exp, elfoDoTeste.getExperiencia());
     }
-    
+    /*
     @Test
     public void elfoAtiraFlechasN42(){
         //Arrange
@@ -82,7 +165,7 @@ public class ElfoTest{
         assertEquals(exp, elfoDoTeste.getExperiencia());
     }
     */
-    
+    /*
     @Test
     public void elfoAtiraUmaFlechaNoDwarf(){
         //Arrange
@@ -92,7 +175,7 @@ public class ElfoTest{
         int exp = 1;
         int vidaDwarf = 100;
         //Act
-        Elfo elfoDoTeste = new Elfo ("Elfii",4);
+        Elfo elfoDoTeste = new Elfo ("Elfii");
         for(int i=0; i< nFlechasAtiradas; i++){
             elfoDoTeste.atirarFlecha(alvoEsperado);
         }
@@ -112,7 +195,7 @@ public class ElfoTest{
         int exp = 3;
         int vidaDwarf = 110;
         //Act
-        Elfo elfoDoTeste = new Elfo ("Elfii",4);
+        Elfo elfoDoTeste = new Elfo ("Elfii");
         for(int i=0; i< nFlechasAtiradas; i++){
             elfoDoTeste.atirarFlecha(alvoEsperado);
         }
@@ -135,7 +218,7 @@ public class ElfoTest{
         int exp = 7;
         int vidaDwarf = 70;
         //Act
-        Elfo elfoDoTeste = new Elfo ("Elfii",4);
+        Elfo elfoDoTeste = new Elfo ("Elfii");
         for(int i=0; i< nFlechasNoAlvo; i++){
             elfoDoTeste.atirarFlecha(alvoEsperado);
         }
@@ -151,79 +234,7 @@ public class ElfoTest{
         assertEquals(vidaDwarf, elfoDoTeste.getVidaDwarf().getVida());
     }
     
-    @Test
-    public void elfoDivide2Lembas(){
-        //Arrange
-        int lembasEsperadas = 2;
-        boolean respostaEsperada = false;
-        
-        //Act
-        Elfo elfoDoTeste = new Elfo ("Elf",2);
-               
-        //Assert    
-        assertEquals(respostaEsperada, elfoDoTeste.getLembas().podeDividirEmPares());
-      
-    }
     
-    @Test
-    public void elfoDivide7Lembas(){
-        //Arrange
-        int lembasEsperadas = 7;
-        boolean respostaEsperada = false;
-        
-        //Act
-        Elfo elfoDoTeste = new Elfo ("Elf",7);
-               
-        //Assert    
-        assertEquals(respostaEsperada, elfoDoTeste.getLembas().podeDividirEmPares());
-      
-    }
-    
-    @Test
-    public void elfoDivide100Lembas(){
-        //Arrange
-        int lembasEsperadas = 100;
-        boolean respostaEsperada = true;
-        
-        //Act
-        Elfo elfoDoTeste = new Elfo ("Elf",100);
-               
-        //Assert    
-        assertEquals(respostaEsperada, elfoDoTeste.getLembas().podeDividirEmPares());
-      
-    }
-    
-    @Test
-    public void elfoDivide101Lembas(){
-        //Arrange
-        int lembasEsperadas = 101;
-        boolean respostaEsperada = false;
-        
-        //Act
-        Elfo elfoDoTeste = new Elfo ("Elf",101);
-               
-        //Assert    
-        assertEquals(respostaEsperada, elfoDoTeste.getLembas().podeDividirEmPares());
-      
-    }
-    
-    @Test
-    public void elfoDivide10Lembas(){
-        //Arrange
-        int lembasEsperadas = 10;
-        boolean respostaEsperada = true;
-        int p1Esperado = 4;
-        int p2Esperado = 6;
-        //Act
-        Elfo elfoDoTeste = new Elfo ("Elf",10);
-        
-               
-        //Assert    
-        assertEquals(respostaEsperada, elfoDoTeste.getLembas().podeDividirEmPares());
-        assertEquals(p1Esperado, elfoDoTeste.getLembas().getP1());
-        assertEquals(p2Esperado, elfoDoTeste.getLembas().getP2());
-        
-    }
     
     
     /*

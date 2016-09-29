@@ -11,7 +11,9 @@ public class DataTerceiraEraTest
         //Act
         data.ehBissexto();
         //Assert
-        assertEquals(true,data.ehBissexto());
+        //assertEquals(true,data.ehBissexto());
+        //Simplificado por:
+        assertTrue(data.ehBissexto());
     }
     
     @Test
@@ -21,7 +23,7 @@ public class DataTerceiraEraTest
         //Act
         data.ehBissexto();
         //Assert
-        assertEquals(true,data.ehBissexto());
+        assertTrue(data.ehBissexto());
     }
     
     @Test

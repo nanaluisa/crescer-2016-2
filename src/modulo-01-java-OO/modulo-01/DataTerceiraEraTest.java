@@ -35,4 +35,9 @@ public class DataTerceiraEraTest
         //Assert
         assertEquals(false,data.ehBissexto());
     }
+    
+    @Test
+    public void criarAno1900NaoEhBissexto(){
+        //assertFalse();
+    }
 }

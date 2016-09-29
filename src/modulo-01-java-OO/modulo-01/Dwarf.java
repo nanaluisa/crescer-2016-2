@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-public class Dwarf{
-   private int vida = 110;
-      
-   public void perdeVida(){
-       vida -= 10;
-   }
-   
-   /*public Dwarf(){
-       vida = 110;
-   }*/ 
-    
-   public int getVida(){
-       return vida;
-   }
-      
-   /*
-        Elfos caçam Dwarves!
-
-        Permitir que Elfos atirem flechas em Dwarves (anões)! 
-        Lembrem-se que um Dwarf nasce com 110 unidades de vida 
-        e perde 10 a cada flechada.   
-    */
-}
-=======
 public class Dwarf {
     private int vida;
     private DataTerceiraEra dataNascimento;
@@ -34,20 +9,23 @@ public class Dwarf {
         vida = 110;
     }
     
+    public Dwarf(){
+        this(null, new DataTerceiraEra(1,1,1));
+    }
+    
     public Dwarf(String nome, DataTerceiraEra data){
         this.nome = nome;
         dataNascimento = new DataTerceiraEra(data.getDia(),data.getMes(), data.getAno());
     }
     
-    public void perderVida() {
-       double sorte = getNumeroDaSorte();
+    public void perdeVida() {
+       double sorte = this.getNumeroDaSorte();
        if(sorte < 0){
-           experiencia ++;
-       }else if(sorte >= 0 && sorte <= 100){
-           
-       }else{
+           experiencia +=2;
+       }//else if(sorte >= 0 && sorte <= 100){
+       if(sorte > 100){
            vida -= 10;
-      }
+       }
     }
 
     public int getVida() {
@@ -62,11 +40,12 @@ public class Dwarf {
         double nSorte = 101.0;
         if(dataNascimento.ehBissexto() && this.vida >= 80 && this.vida <= 90){
             return nSorte * (-33);
+            //ou simplesmente:
+            //nSorte *= -33.0;
         }
-        if(!dataNascimento.ehBissexto() && this.nome.equalsIgnoreCase("Seixas") || this.nome.equalsIgnoreCase("Meireles")){
+        if(!dataNascimento.ehBissexto() &&("Seixas".equals(this.nome)||"Meireles".equals(this.nome))){
             return (nSorte * 33) % 100 ;
         }
         return nSorte;
     }
 }
->>>>>>> master

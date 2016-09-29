@@ -16,7 +16,7 @@ public class DwarfTest
     public void dwarfPerdeVidaUmaVez() {
         DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
         Dwarf gimli = new Dwarf("Gimli",data);
-        gimli.perderVida();
+        gimli.perdeVida();
         assertEquals(100, gimli.getVida());
     }
 
@@ -24,8 +24,8 @@ public class DwarfTest
     public void dwarfPerdeVidaDuasVezes() {
         DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
         Dwarf gimli = new Dwarf("Gimli",data);
-        gimli.perderVida();
-        gimli.perderVida();
+        gimli.perdeVida();
+        gimli.perdeVida();
         assertEquals(90, gimli.getVida());
     }
     /*

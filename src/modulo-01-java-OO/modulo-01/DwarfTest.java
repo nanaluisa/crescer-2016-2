@@ -67,6 +67,86 @@ public class DwarfTest
         assertEquals(110, seixas.getVida());
         
     }
+    
+   @Test
+   public void dwarfNasceVivo(){
+       Dwarf dwarf = new Dwarf();       
+       assertEquals(dwarf.getStatus(),Status.VIVO);
+   }
+    
+   @Test
+   public void statusDwarfMortoPerdeVida20NaoDeveVidas(){
+       Dwarf dwarf = new Dwarf();
+       
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       assertEquals(Status.MORTO,dwarf.getStatus());
+       assertEquals(0,dwarf.getVida());
+    }
+   
+   @Test
+   public void statusDwarfVivoPerdeVida1(){
+       Dwarf dwarf = new Dwarf();
+       
+       dwarf.perdeVida();
+       
+       assertEquals(Status.VIVO, dwarf.getStatus());
+   }
+    
+   @Test
+   public void statusDwarfVivoPerdeVida7(){
+       Dwarf dwarf = new Dwarf();
+       
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       
+       assertEquals(Status.VIVO, dwarf.getStatus());
+   } 
+    
+   @Test
+   public void statusDwarfVivoPerdeVida11(){
+       Dwarf dwarf = new Dwarf();
+       
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       dwarf.perdeVida();
+       
+       assertEquals(Status.MORTO,dwarf.getStatus());
+       assertEquals(0,dwarf.getVida());
+   } 
+    
+   
 }
 
 

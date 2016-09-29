@@ -4,10 +4,11 @@ public class Elfo{
     private Item flecha;
     private int experiencia;
     private Status status;
-    
+        
     public Elfo(String n) {
         // Chamando construtor debaixo
         this(n, 42);
+        status = Status.VIVO;
     }
     
     public Elfo(String nome, int quantidadeFlechas) {
@@ -40,15 +41,17 @@ public class Elfo{
     public Status getStatus(){
         return status;
     }
-            
+    
     public void atirarFlecha(Dwarf dwarf){
       boolean temFlecha = flecha.getQuantidade() > 0;
-      if(temFlecha){
-        flecha.setQuantidade(flecha.getQuantidade()-1);
-        experiencia++;
-        dwarf.perdeVida();
+      
+      if(dwarf.getStatus() == Status.VIVO){
+          if(temFlecha){
+            flecha.setQuantidade(flecha.getQuantidade()-1);
+            experiencia++;
+            dwarf.perdeVida();
+          }
       }
-    
          /*public void atirarFlechaRefactory(){
           //atirarFlecha();
           experiencia++;

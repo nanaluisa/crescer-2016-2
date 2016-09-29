@@ -3,16 +3,16 @@ public class Elfo{
     private Item arco;
     private Item flecha;
     private int experiencia;
-              
-    public Elfo(String n){
-        //chamando o construtor de baixo.
-        this(n,42);
+     
+    public Elfo(String n) {
+        // Chamando construtor debaixo
+        this(n, 42);
     }
-       
-    public Elfo(String n, int quantFlechas){
-        nome = n;
+    
+    public Elfo(String nome, int quantidadeFlechas) {
+        this.nome = nome;
         arco = new Item("Arco", 1);
-        flecha = new Item("Flechas",quantFlechas >=0 ? quantFlechas : 42 );
+        flecha = new Item("Flechas", quantidadeFlechas >= 0 ? quantidadeFlechas : 42);
     }
     
     public void setNome(String n){
@@ -22,7 +22,7 @@ public class Elfo{
     public String getNome(){
         return nome;
     }
-    
+        
     public Item getArco(){
         return arco;
     }
@@ -49,35 +49,36 @@ public class Elfo{
           flecha.setQuantidade(flecha.getQuantidade()-1);
          }*/
         
-          //if(flecha.getQuantidade() >0){
-            //if(alvo.equalsIgnoreCase("Dwarf") ||alvo.equalsIgnoreCase("Dwarves") ){
-             // dwarf.setVida(dwarf.getVida()-10);  
-            //}
-           //}
+    public void atirarFlecha(Dwarf dwarf) {
+        boolean temFlecha = flecha.getQuantidade() > 0;
+        if (temFlecha) {
+            flecha.setQuantidade(flecha.getQuantidade() - 1);
+            experiencia++;
+            dwarf.perderVida();
+        }
     }
     
-    
-    public String toString(){
-         boolean flechaNoSingular = this.flecha.getQuantidade() == 1;
-         boolean experienciaNoSingular = this.experiencia == 0 || this.experiencia ==1;
-         
+    public String toString() {
+        //return "<nome> possui <flechas> flechas e <exp> níveis de experiência.";
+
+        boolean flechaNoSingular = this.flecha.getQuantidade() == 1;
+        boolean experienciaNoSingular = this.experiencia == 0 || this.experiencia == 1;
+
         return String.format("%s possui %d %s e %d %s de experiência.",
-        this.nome,
-        this.flecha.getQuantidade(),
-        flechaNoSingular ? "flecha" : "flechas",
-        this.experiencia,
-        experienciaNoSingular ? "nível" : "níveis");
-        /*
-         * Método efatorado acima.
-        return this.nome + " possui " + this.flecha.getQuantidade()+ 
-        " flechas e " + this.experiencia + " níveis de experiência.";
-        */
+            this.nome,
+            this.flecha.getQuantidade(),
+            // ?:
+            flechaNoSingular ? "flecha" : "flechas",
+            this.experiencia,
+            experienciaNoSingular ? "nível" : "níveis"
+        );
     }
-    
-    
-    
-    
-    
-    
-    
+   
+    /*
+     * public void atirarFlechaRefactory(){
+      experiencia++;
+      flecha.setQuantidade(flecha.getQuantidade()-1);
+    }
+    */
+
 }

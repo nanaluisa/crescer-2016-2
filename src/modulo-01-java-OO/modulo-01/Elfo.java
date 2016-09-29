@@ -3,18 +3,7 @@ public class Elfo{
     private Item arco;
     private Item flecha;
     private int experiencia;
-<<<<<<< HEAD
-    private Dwarves dwarf;
-    private CestoDeLembas nLembas;
-        
-    public Elfo(String n, int nLembas){
-        nome = n;
-        arco = new Item("Arco", 1);
-        flecha = new Item("Flechas",42);
-        dwarf = new Dwarves();
-        this.nLembas = new CestoDeLembas(nLembas);
-=======
-    
+     
     public Elfo(String n) {
         // Chamando construtor debaixo
         this(n, 42);
@@ -24,7 +13,6 @@ public class Elfo{
         this.nome = nome;
         arco = new Item("Arco", 1);
         flecha = new Item("Flechas", quantidadeFlechas >= 0 ? quantidadeFlechas : 42);
->>>>>>> master
     }
     
     public void setNome(String n){
@@ -34,8 +22,7 @@ public class Elfo{
     public String getNome(){
         return nome;
     }
-<<<<<<< HEAD
-    
+        
     public Item getArco(){
         return arco;
     }
@@ -48,44 +35,6 @@ public class Elfo{
         return experiencia;
     }
         
-    public Dwarves getVidaDwarf(){
-        return dwarf;
-    }
-    
-    public CestoDeLembas getLembas(){
-          return nLembas; 
-      }
-    
-    public void atirarFlecha(String alvo){
-      if(flecha.getQuantidade() >0){
-        flecha.setQuantidade(flecha.getQuantidade()-1);
-        experiencia++;
-        if(alvo.equalsIgnoreCase("Dwarf") ||alvo.equalsIgnoreCase("Dwarves") ){
-          dwarf.setVida(dwarf.getVida()-10);  
-        }
-      }
-    }
-    
-    /*public void atirarFlechaRefactory(){
-      //atirarFlecha();
-      experiencia++;
-      flecha.setQuantidade(flecha.getQuantidade()-1);
-    }*/
-}
-=======
-
-    public Item getArco() {
-        return arco;
-    }
-
-    public int getExperiencia() {
-        return experiencia;
-    }
-
-    public Item getFlecha() {
-        return flecha;
-    }
-
     public void atirarFlecha(Dwarf dwarf) {
         boolean temFlecha = flecha.getQuantidade() > 0;
         if (temFlecha) {
@@ -94,7 +43,7 @@ public class Elfo{
             dwarf.perderVida();
         }
     }
-
+    
     public String toString() {
         //return "<nome> possui <flechas> flechas e <exp> níveis de experiência.";
 
@@ -110,11 +59,12 @@ public class Elfo{
             experienciaNoSingular ? "nível" : "níveis"
         );
     }
+   
+    /*
+     * public void atirarFlechaRefactory(){
+      experiencia++;
+      flecha.setQuantidade(flecha.getQuantidade()-1);
+    }
+    */
 
-    /*public void atirarFlechaRefactory() {
-    experiencia++;
-    flecha.setQuantidade(flecha.getQuantidade()-1);
-    }*/
 }
-
->>>>>>> master

@@ -15,4 +15,3 @@ public class Dwarf {
         return vida;
     }
 }
-// Dwarf gimli;

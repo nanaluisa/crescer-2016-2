@@ -61,7 +61,7 @@ public class DwarfTest
         gimli.perderVida();
         gimli.perderVida();
         assertEquals(0, gimli.getVida());
-<<<<<<< HEAD
+
     }
     
    
@@ -106,14 +106,7 @@ public class DwarfTest
     }
     
     
-    
-   @Test
-   public void dwarfNasceVivo(){
-       Dwarf dwarf = new Dwarf();       
-       assertEquals(dwarf.getStatus(),Status.VIVO);
-   }
-    
-   @Test
+     @Test
    public void statusDwarfMortoPerdeVida20NaoDeveVidas(){
        Dwarf dwarf = new Dwarf();
        
@@ -183,12 +176,7 @@ public class DwarfTest
        
        assertEquals(Status.MORTO,dwarf.getStatus());
        assertEquals(0,dwarf.getVida());
-   } 
-    
-   
-}
-=======
-        assertEquals(Status.MORTO, gimli.getStatus());
+      assertEquals(Status.MORTO, gimli.getStatus());
     }
 
     @Test
@@ -249,7 +237,7 @@ public class DwarfTest
         // Assert
         assertEquals(33.0, resultado, .0);
     }
->>>>>>> master
+
 
     @Test
     public void gerarNumeroAnoNaoBissextoNomeMeireles() {
@@ -271,34 +259,7 @@ public class DwarfTest
         assertEquals(101.0, resultado, .0);
     }
 
-    @Test
-    public void dwarfPerderVidaComNumeroSorteNegativo() {
-        // Arrange
-        Dwarf dwarf = new Dwarf("Gimli", new DataTerceiraEra(1,1,2000));
-        dwarf.perderVida();
-        dwarf.perderVida();
-        // Act
-        dwarf.perderVida();
-        // Assert
-        assertEquals(2, dwarf.getExperiencia());
-        assertEquals(90, dwarf.getVida(), .0);   
-    }
-
-    @Test
-    public void dwarfPerderVidaComAnoNaoBissextoMeirelesNaoPerde() {
-        Dwarf meireles = new Dwarf("Meireles", new DataTerceiraEra(2, 3, 2015));
-        meireles.perderVida();
-        assertEquals(0, meireles.getExperiencia());
-        assertEquals(110, meireles.getVida(), .0);
-    }
-
-    @Test
-    public void dwarfPerderVidaNormal(){
-        Dwarf dwarf = new Dwarf("André Nunin", new DataTerceiraEra(2, 3, 2015));
-        dwarf.perderVida();
-        assertEquals(100, dwarf.getVida(), .0);
-        assertEquals(0, dwarf.getExperiencia());
-    }
+    
 
     @Test
     public void adicionarItemNoInventario() {

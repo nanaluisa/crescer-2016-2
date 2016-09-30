@@ -2,7 +2,6 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-<<<<<<< HEAD
 public class InventarioTest
 {
     @Test
@@ -63,11 +62,7 @@ public class InventarioTest
     
     }*/
     
-    
-}
-=======
-
-public class InventarioTest {
+    //Merge:
     @Test
     public void adicionarItemNoInventario() {
         Inventario inventario = new Inventario();
@@ -194,6 +189,11 @@ public class InventarioTest {
         assertEquals(0, inventario.getItens().size());
     }
 
+    @Test
+    public void ordenarArrayDoInventarioPorQuantidades(){
+        criarInventarioCom3Itens();
+    }
+    
     private Inventario criarInventarioCom3Itens() {
         Inventario inventario = new Inventario();
         inventario.adicionarItem(new Item("Espada de aço", 2));
@@ -203,4 +203,3 @@ public class InventarioTest {
     }
 }
 
->>>>>>> master

@@ -11,7 +11,15 @@ public class Item{
         quantidade = novaQuantidade;
     }
     
+<<<<<<< HEAD
     public int getQuantidade(){
+=======
+    public void aumentarUnidades(int unidades) {
+        quantidade += unidades;
+    }
+    
+    public int getQuantidade() {
+>>>>>>> master
         return quantidade;
     }
     

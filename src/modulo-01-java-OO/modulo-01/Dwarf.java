@@ -4,10 +4,13 @@ public class Dwarf {
     private String nome;
     private int experiencia;
     private Status status;
+    private Inventario inventario;
+    
     // java type initializer
     // vai ser replicado para cada construtor
     {
         vida = 110;
+        inventario = new Inventario();
     }
     
     public Dwarf(){
@@ -62,4 +65,52 @@ public class Dwarf {
         }
         return nSorte;
     }
+    
+    
+    public void adicionarItem(Item item){
+        inventario.adicionarItem(new Item("Arco",1));
+        //inventario = new Inventario(inventario.adicionarItem(new Item(item.getDescricao(),item.getQuantidade())));
+        //itens.add(new Item(item.getDescricao(),item.getQuantidade()));
+    }
+            /*
+               public class Item{
+            private String descricao;
+            private int quantidade;
+            
+            public Item(String descricao, int quantidade){
+                this.descricao = descricao;
+                this.quantidade = quantidade;
+            }
+            
+            public void setQuantidade(int novaQuantidade){
+                quantidade = novaQuantidade;
+            }
+            
+            public int getQuantidade(){
+                return quantidade;
+            }
+            
+            public String getDescricao(){
+                return descricao;
+            }
+        }
+               */
+    
+    
+    public void perderItem(Item item){
+    
+    }
+    
+    /*
+       OK Permitir que Dwarves tenham UM inventário e 
+       
+       --> ganhem e percam itens de seu inventário.
+
+        Sugestões (métodos para serem adicionados na classe Dwarf):
+        
+        adicionarItem(Item item)
+        perderItem(Item item)
+       
+       */
+    
 }

@@ -96,22 +96,21 @@ public class Inventario{
    }
    
   public void ordenarItens(){
-      
-        Item maiorQtd = itens.get(0);  
-        for(int i = 1; i<itens.size(); i++){ 
-            for(int j = i+1; j<itens.size()-1; j++){ 
-                Item salva; 
-                if(maiorQtd.getQuantidade() < itens.get(j).getQuantidade()){ 
+        Item salva;
+       for(int i = 0; i < itens.size()-1; i++){ 
+            for(int j = i+1; j < itens.size(); j++){ 
+                //Item indMaiorQtd = itens.get(0);
+                if(itens.get(j).getQuantidade() < itens.get(i).getQuantidade()){ 
                     salva = itens.get(j); 
-                    //itens.get(j) = maiorQtd; 
-                    maiorQtd = salva; 
+                    //comentei os comandos abaixo, pois está dando erro no .get(j) e .get(i).
+                    //itens.get(j) = itens.get(i); 
+                    //itens.get(i) = salva; 
                 } 
            } 
         } 
-    
-          
-          
-          
-      } 
-  
   }
+  
+  
+  
+  
+}

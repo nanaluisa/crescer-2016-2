@@ -79,16 +79,8 @@ public class Dwarf {
         this.inventario.adicionarItem(item);
     }
     
-    
-
     public String getNome() {
         return this.nome;
-    }
-
-    
-    
-    public Inventario getInventario() {
-        return inventario;
     }
 
     public DataTerceiraEra getDataNascimento() {

@@ -104,14 +104,7 @@ public class DwarfTest
         assertEquals(100, dwarf.getVida(), .0); 
         assertEquals(0, dwarf.getExperiencia()); 
    }
-    
-    
-   @Test
-   public void dwarfNasceVivo(){
-       Dwarf dwarf = new Dwarf();       
-       assertEquals(dwarf.getStatus(),Status.VIVO);
-   }
-    
+        
    @Test
    public void statusDwarfMortoPerdeVida20NaoDeveVidas(){
        Dwarf dwarf = new Dwarf();
@@ -182,7 +175,7 @@ public class DwarfTest
        
        assertEquals(Status.MORTO,dwarf.getStatus());
        assertEquals(0,dwarf.getVida());
-      assertEquals(Status.MORTO, gimli.getStatus());
+      assertEquals(Status.MORTO, dwarf.getStatus());
     }
 
     @Test

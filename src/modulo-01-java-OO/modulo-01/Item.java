@@ -23,7 +23,7 @@ public class Item{
         return descricao;
     }
     
-     public void aumentarUnidades(int unidades) { 
+     public void aumentarUnidadesDosItens(int unidades){ 
         quantidade += unidades; 
     }
 }

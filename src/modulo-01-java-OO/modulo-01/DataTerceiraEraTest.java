@@ -2,6 +2,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
 public class DataTerceiraEraTest
 {
     @Test
@@ -96,4 +97,18 @@ public class DataTerceiraEraTest
     public void criarAno2015QueNaoEhBissexto() { 
         assertFalse(new DataTerceiraEra(04, 05, 2015).ehBissexto()); 
     } 
+
+    
+    
+    @Test
+    public void criarAno2000QueEhBissexto() {
+        // Arrange
+        DataTerceiraEra data = new DataTerceiraEra(1, 1, 2000);
+        // Act
+        boolean obtido = data.ehBissexto();
+        // Assert
+        assertTrue(obtido);
+    }
+    
 }
+

@@ -11,20 +11,25 @@ public class Dwarf {
     {
         vida = 110;
         inventario = new Inventario();
+        //status = Status.VIVO;
     }
-    
-    public Dwarf(){
+
+    public Dwarf() {
         this(null, new DataTerceiraEra(1,1,1));
         status = Status.VIVO;
     }
-    
-    public Dwarf(String nome, DataTerceiraEra data){
+
+    public Dwarf(String nome, DataTerceiraEra dataNascimento) {
         this.nome = nome;
-        dataNascimento = new DataTerceiraEra(data.getDia(),data.getMes(), data.getAno());
-        status = Status.VIVO;
+        this.dataNascimento = dataNascimento;
+        this.status = Status.VIVO;
+        this.inventario = new Inventario();
     }
+        
+    
     
     public void perderVida() {
+
        double sorte = this.getNumeroDaSorte();
        boolean estaMorto = status.equals(status.MORTO);
        if(!estaMorto){
@@ -39,12 +44,12 @@ public class Dwarf {
            vida -= 10;
        }
       }
-    }
+          }
 
     public int getVida() {
         return vida;
     }
-    
+
     public int getExperiencia(){
         return experiencia;
     }
@@ -74,16 +79,48 @@ public class Dwarf {
         this.inventario.adicionarItem(item);
     }
     
-    public void perderItem(Item item){
+    
+
+    public String getNome() {
+        return this.nome;
+    }
+
+    
+    
+    public Inventario getInventario() {
+        return inventario;
+    }
+
+    public DataTerceiraEra getDataNascimento() {
+        return this.dataNascimento;
+    }
+
+    public double getNumeroSorte() {
+        double resultado = 101.;
+        boolean ehBissexto = dataNascimento.ehBissexto();
+
+        if (ehBissexto && this.vida >= 80 && this.vida <= 90) {
+            resultado *= -33.0;
+        }
+        //if (!dataNascimento.ehBissexto() && this.nome != null && (this.nome.equals("Seixas") || this.nome.equals("Meireles"))) {
+        if (!ehBissexto && ("Seixas".equals(this.nome) || "Meireles".equals(this.nome))) {
+            resultado = resultado * 33 % 100;
+        }
+
+        return resultado;
+    }
+    
+    public void perderItem(Item item) {
         this.inventario.removerItem(item);
     }
     
-     public void tentarSorte() { 
-        boolean temSorte = getNumeroDaSorte() == -3333; 
-        if (temSorte) { 
-            // aumenta 1000 unidades para todos itens do inventario 
-            inventario.aumentarUnidadesDosItens(1000); 
-        } 
+    public void tentarSorte() {
+        boolean temSorte = getNumeroSorte() == -3333;
+        if (temSorte) {
+            // aumenta 1000 unidades para todos itens do inventario
+            inventario.aumentarUnidadesDosItens(1000);
+        }
     }
+    
     
 }

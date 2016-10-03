@@ -283,8 +283,8 @@ public class ElfoTest{
         assertEquals(42, elrond.getFlecha().getQuantidade());
     }
     
-    @Test
-    public void elfoNasceVivo(){
+
+    @Test public void elfoNasceVivo() {
         Elfo elfo = new Elfo("Cobaia");
         assertEquals(Status.VIVO, elfo.getStatus());
     }

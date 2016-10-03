@@ -1,7 +1,5 @@
 public class Elfo{
     private String nome;
-    private Item arco;
-    private Item flecha;
     private int experiencia;
     private Status status;
     private Inventario inventario;
@@ -11,7 +9,7 @@ public class Elfo{
         this(n, 42);
         status = Status.VIVO;
     }
-    
+
     public Elfo(String nome, int quantidadeFlechas) {
         this.nome = nome;
         //arco = new Item("Arco", 1);
@@ -29,7 +27,7 @@ public class Elfo{
     public String getNome(){
         return nome;
     }
-        
+
     public Item getArco(){
         //return arco;
         return this.inventario.getItens().get(0); 
@@ -43,6 +41,7 @@ public class Elfo{
     public int getExperiencia(){
         return experiencia;
     }
+
     
     public Status getStatus(){
         return status;
@@ -69,7 +68,7 @@ public class Elfo{
           flecha.setQuantidade(flecha.getQuantidade()-1);
          }*/
      
-    }
+    
     
     public String toString() {
         //return "<nome> possui <flechas> flechas e <exp> níveis de experiência.";

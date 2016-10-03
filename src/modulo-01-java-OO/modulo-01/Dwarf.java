@@ -53,6 +53,10 @@ public class Dwarf {
         return status;
     }
     
+    public Inventario getInventario(){
+        return inventario;
+    }
+    
     public double getNumeroDaSorte(){
         double nSorte = 101.0;
         if(dataNascimento.ehBissexto() && this.vida >= 80 && this.vida <= 90){
@@ -66,51 +70,20 @@ public class Dwarf {
         return nSorte;
     }
     
-    
     public void adicionarItem(Item item){
-        inventario.adicionarItem(new Item("Arco",1));
-        //inventario = new Inventario(inventario.adicionarItem(new Item(item.getDescricao(),item.getQuantidade())));
-        //itens.add(new Item(item.getDescricao(),item.getQuantidade()));
+        this.inventario.adicionarItem(item);
     }
-            /*
-               public class Item{
-            private String descricao;
-            private int quantidade;
-            
-            public Item(String descricao, int quantidade){
-                this.descricao = descricao;
-                this.quantidade = quantidade;
-            }
-            
-            public void setQuantidade(int novaQuantidade){
-                quantidade = novaQuantidade;
-            }
-            
-            public int getQuantidade(){
-                return quantidade;
-            }
-            
-            public String getDescricao(){
-                return descricao;
-            }
-        }
-               */
-    
     
     public void perderItem(Item item){
-    
+        this.inventario.removerItem(item);
     }
     
-    /*
-       OK Permitir que Dwarves tenham UM inventário e 
-       
-       --> ganhem e percam itens de seu inventário.
-
-        Sugestões (métodos para serem adicionados na classe Dwarf):
-        
-        adicionarItem(Item item)
-        perderItem(Item item)
-       
-       */
+     public void tentarSorte() { 
+        boolean temSorte = getNumeroDaSorte() == -3333; 
+        if (temSorte) { 
+            // aumenta 1000 unidades para todos itens do inventario 
+            inventario.aumentarUnidadesDosItens(1000); 
+        } 
+    }
     
 }

@@ -31,4 +31,8 @@ public class Personagem {
         return inventario;
     }
     
+    public int getVida(){
+        return vida;
+    }
+    
 }

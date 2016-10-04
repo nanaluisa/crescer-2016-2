@@ -26,4 +26,19 @@ public class Item{
      public void aumentarUnidadesDosItens(int unidades){ 
         quantidade += unidades; 
     }
+    
+    @Override
+    public boolean equals(Object obj){
+        Item comp = (Item)obj;
+        //aqui eu defino o MEU método de igualdade.
+        //originalmente o Java compara pelo equals a Identidade(Referencia), não o conteúdo.
+        return  
+        this.descricao.equals(comp.descricao)&& 
+        this.quantidade == comp.quantidade;
+        //posso acessar o campo privado pq é do mesmo tipo(descricao e quantidade).
+        // Se não teria que acessar pelo get.
+    }
+    
+    
+    
 }

@@ -7,16 +7,12 @@ public class Elfo extends Personagem{
     public Elfo(String nome, int quantidadeFlechas) {
         super(nome);
         this.vida = 100;
-        setItensElfo(quantidadeFlechas);
-    }
-   
-    public void setItensElfo(int quantidadeFlechas){
         this.inventario.adicionarItem(new Item("Arco", 1)); 
         this.inventario.adicionarItem(new Item("Flechas", quantidadeFlechas >= 0 ? quantidadeFlechas : 42)); 
         //arco = new Item("Arco", 1);
         //flecha = new Item("Flechas", quantidadeFlechas >= 0 ? quantidadeFlechas : 42);
     }
-    
+       
     public Item getArco(){
         //return arco;
         return this.inventario.getItens().get(0); 
@@ -40,9 +36,7 @@ public class Elfo extends Personagem{
             dwarf.perderVida();
           }
       }
-        
-      
-        /*public void atirarFlechaRefactory(){
+          /*public void atirarFlechaRefactory(){
           //atirarFlecha();
           experiencia++;
           flecha.setQuantidade(flecha.getQuantidade()-1);

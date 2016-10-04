@@ -13,7 +13,7 @@ public class ElfoVerdeTest{
         green.getVida();
         green.getInventario();
         //Assert
-        assertEquals(100,green.getVida());
+        assertEquals(100,green.getVida(), 0.1);
         //assertEquals("Espada de aço valiriano", inventario.getItens().get(0).getDescricao());
         //assertEquals("Arco e Flecha de Vidro", inventario.getItens().get(1).getDescricao());
         

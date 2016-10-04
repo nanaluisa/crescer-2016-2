@@ -23,16 +23,16 @@ public class Dwarf extends Personagem{
            this.experiencia +=2;
        }
        if(sorte > 100){
-           int vidaAposFlechada = this.vida -10;
+           double vidaAposFlechada = this.vida - 10.0;
            if (vidaAposFlechada == 0){
                status = Status.MORTO;
            }
            vida -= 10;
        }
       }
-          }
+    }
 
-    public int getVida() {
+    public double getVida() {
         return vida;
     }
 
@@ -47,10 +47,6 @@ public class Dwarf extends Personagem{
             return (nSorte * 33) % 100 ;
         }
         return nSorte;
-    }
-    
-    public void adicionarItem(Item item){
-        this.inventario.adicionarItem(item);
     }
     
     public DataTerceiraEra getDataNascimento() {
@@ -71,11 +67,7 @@ public class Dwarf extends Personagem{
 
         return resultado;
     }
-    
-    public void perderItem(Item item) {
-        this.inventario.removerItem(item);
-    }
-    
+     
     public void tentarSorte() {
         boolean temSorte = getNumeroSorte() == -3333;
         if (temSorte) {
@@ -83,6 +75,4 @@ public class Dwarf extends Personagem{
             inventario.aumentarUnidadesDosItens(1000);
         }
     }
-    
-    
 }

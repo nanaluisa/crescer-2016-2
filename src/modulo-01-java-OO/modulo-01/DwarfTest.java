@@ -10,7 +10,7 @@ public class DwarfTest
     public void dwarfNasceCom110Vida() {
         DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
         Dwarf gimli = new Dwarf("Gimli",data);
-        assertEquals(110, gimli.getVida());
+        assertEquals(110, gimli.getVida(), 0.1);
     }
 
     @Test
@@ -23,7 +23,7 @@ public class DwarfTest
         DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
         Dwarf gimli = new Dwarf("Gimli",data);
         gimli.perderVida();
-        assertEquals(100, gimli.getVida());
+        assertEquals(100, gimli.getVida(), 0.1);
     }
 
     @Test
@@ -32,7 +32,7 @@ public class DwarfTest
         Dwarf gimli = new Dwarf("Gimli",data);
         gimli.perderVida();
         gimli.perderVida();
-        assertEquals(90, gimli.getVida());
+        assertEquals(90, gimli.getVida(), 0.1);
         assertEquals(Status.VIVO, gimli.getStatus());
     }
     
@@ -60,7 +60,7 @@ public class DwarfTest
         gimli.perderVida();
         gimli.perderVida();
         gimli.perderVida();
-        assertEquals(0, gimli.getVida());
+        assertEquals(0, gimli.getVida(), 0.1);
 
     }
     
@@ -72,7 +72,7 @@ public class DwarfTest
         
         seixas.getNumeroDaSorte();
         
-        assertEquals(110, seixas.getVida());
+        assertEquals(110, seixas.getVida(), 0.1);
         
     }
     
@@ -130,7 +130,7 @@ public class DwarfTest
        dwarf.perderVida();
        dwarf.perderVida();
        assertEquals(Status.MORTO,dwarf.getStatus());
-       assertEquals(0,dwarf.getVida());
+       assertEquals(0,dwarf.getVida(), 0.1);
     }
    
    @Test
@@ -174,7 +174,7 @@ public class DwarfTest
        dwarf.perderVida();
        
        assertEquals(Status.MORTO,dwarf.getStatus());
-       assertEquals(0,dwarf.getVida());
+       assertEquals(0,dwarf.getVida(), 0.1);
       assertEquals(Status.MORTO, dwarf.getStatus());
     }
 
@@ -192,7 +192,7 @@ public class DwarfTest
         gimli.perderVida();
         gimli.perderVida();
         gimli.perderVida();
-        assertEquals(0, gimli.getVida());
+        assertEquals(0, gimli.getVida(),0.1);
         assertEquals(Status.MORTO, gimli.getStatus());
     }
 

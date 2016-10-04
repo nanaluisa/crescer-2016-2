@@ -162,7 +162,7 @@ public class ElfoTest{
         DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
         Dwarf balin = new Dwarf("Dwarf",data);
         elfo.atirarFlecha(balin);
-        assertEquals(100, balin.getVida());
+        assertEquals(100, balin.getVida(), 0.1);
     }
 
     @Test
@@ -172,7 +172,7 @@ public class ElfoTest{
         Dwarf balin = new Dwarf("Dwarf",data);
         elfo.atirarFlecha(balin);
         elfo.atirarFlecha(balin);
-        assertEquals(90, balin.getVida());
+        assertEquals(90, balin.getVida(), 0.1);
     }
 
     @Test
@@ -183,8 +183,8 @@ public class ElfoTest{
         Dwarf gloin = new Dwarf("Dwarf",data);
         elfo.atirarFlecha(balin);
         elfo.atirarFlecha(gloin);
-        assertEquals(100, balin.getVida());
-        assertEquals(100, gloin.getVida());
+        assertEquals(100, balin.getVida(), 0.1);
+        assertEquals(100, gloin.getVida(), 0.1);
     }
 
     @Test

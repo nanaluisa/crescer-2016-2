@@ -1,22 +1,18 @@
 public class Dwarf extends Personagem{
-    protected int vida;
     protected DataTerceiraEra dataNascimento;
     // java type initializer
     // vai ser replicado para cada construtor
-    {
-        vida = 110;
-        inventario = new Inventario();
-        //status = Status.VIVO;
-    }
-
     public Dwarf() {
         this(null, new DataTerceiraEra(1,1,1));
         status = Status.VIVO;
+        vida = 110;
     }
 
     public Dwarf(String nome, DataTerceiraEra dataNascimento) {
         super(nome);
         this.dataNascimento = dataNascimento;
+        status = Status.VIVO;
+        vida = 110;
     }
     
     public void perderVida() {

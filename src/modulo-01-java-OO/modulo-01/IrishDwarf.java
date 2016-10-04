@@ -2,7 +2,6 @@ public class IrishDwarf extends Dwarf{
        
     public IrishDwarf(){
         this(null, new DataTerceiraEra(1,1,1));
-        status = Status.VIVO;
     }
     
     public IrishDwarf(String nome, DataTerceiraEra data){

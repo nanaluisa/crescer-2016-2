@@ -3,6 +3,7 @@ public class Personagem {
     protected Inventario inventario;
     protected Status status;
     protected int experiencia;
+    protected int vida;
      
     public Personagem(String nome){
         this.nome = nome;

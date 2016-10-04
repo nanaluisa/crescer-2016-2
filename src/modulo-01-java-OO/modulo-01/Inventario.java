@@ -94,7 +94,7 @@ public class Inventario{
       boolean temItens = !itens.isEmpty(); 
       return temItens ? itens.get(indice) : null; 
    }
-   
+   /*
   public void ordenarItens(){
         Item salva;
        for(int i = 0; i < itens.size()-1; i++){ 
@@ -109,8 +109,36 @@ public class Inventario{
            } 
         } 
   }
+  */
+   public void ordenarItens() { 
+        ordenarItens(TipoOrdenacao.ASCENDENTE);  
+    } 
   
-  
-  
-  
-}
+  public void ordenarItens(TipoOrdenacao tipoOrdenacao) { 
+        if (tipoOrdenacao == TipoOrdenacao.ASCENDENTE) { 
+            // Versão mais estável do Bubblesort - Melhor caso O(n), Pior caso O(n^2) 
+            // homenagem ao do-while: para forçar entrada na lógica 
+            boolean posicoesSendoTrocadas; 
+            boolean ascendente = tipoOrdenacao == TipoOrdenacao.ASCENDENTE; 
+            do { 
+                posicoesSendoTrocadas = false; 
+                for (int j = 0; j < this.itens.size() - 1; j++) { 
+                    Item itemAtual = this.itens.get(j); 
+                    Item proximo = this.itens.get(j + 1); 
+                    //se precisaTrocar for ascendente, faz a lógica ascendente, se não, faz a lógica descendente
+                    //retirando o else if com repetição de código.
+                    boolean precisaTrocar = ascendente ? 
+                                itemAtual.getQuantidade() > proximo.getQuantidade(): 
+                                itemAtual.getQuantidade() < proximo.getQuantidade();
+ 
+                    if (precisaTrocar) { 
+                        this.itens.set(j, proximo); 
+                        this.itens.set(j + 1, itemAtual); 
+                        posicoesSendoTrocadas = true; 
+                    } 
+                } 
+            } while (posicoesSendoTrocadas); 
+        } 
+    } 
+} 
+ 

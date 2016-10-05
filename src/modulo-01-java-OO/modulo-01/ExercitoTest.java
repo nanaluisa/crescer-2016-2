@@ -2,6 +2,7 @@ import static org.junit.Assert.*;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import java.util.ArrayList;
 public class ExercitoTest{
     @Test
     public void alistar3ElfosVerdesE3Noturnos(){
@@ -78,7 +79,7 @@ public class ExercitoTest{
         assertEquals(0, milico.getElfosAlistados().size() );
     }
 
-    @Test
+   @Test
     public void buscarElfoPeloNome(){
         //Arrange
         Exercito milico = new Exercito();
@@ -131,8 +132,82 @@ public class ExercitoTest{
         assertNull(achado3);
     }
 
+     @Test
+    public void buscarElfosComMesmoNomeRetornarOPrimeiro(){
+        //Arrange
+        Exercito milico = new Exercito();
+        
+        ElfoVerde green1 = new ElfoVerde("Green");
+        ElfoVerde green2 = new ElfoVerde("Green");
+        ElfoVerde green3 = new ElfoVerde("Green");
+        
+        Elfo achado = milico.buscarElfoPorNome("Green");
+        
+        //Assert
+        assertEquals(achado,milico.getElfosAlistados().get(0));
+        
+    }
 
-
+    @Test 
+    public void buscarPorStatusVivo() { 
+        Exercito exercito = new Exercito(); 
+        Elfo recruta1 = new ElfoVerde("Elfo Recruta"); 
+        Elfo recruta2 = new ElfoNoturno("Elfo Recruta 2"); 
+        Elfo recruta3 = new ElfoVerde("Elfo Recruta"); 
+        exercito.addElfosValidos(recruta1); 
+        exercito.addElfosValidos(recruta2); 
+        exercito.addElfosValidos(recruta3); 
+        ArrayList<Elfo> resultado = exercito.buscarElfoPorStatus(Status.VIVO); 
+        assertEquals(3, resultado.size()); 
+        assertEquals(recruta1, resultado.get(0)); 
+        assertEquals(recruta2, resultado.get(1)); 
+        assertEquals(recruta3, resultado.get(2)); 
+    } 
+ 
+    @Test 
+    public void buscarPorStatusMorto() { 
+        Exercito exercito = new Exercito(); 
+        Elfo recruta1 = new ElfoVerde("Elfo Recruta"); 
+        Elfo recruta2 = criarElfoNoturnoEMatalo(); 
+        Elfo recruta3 = new ElfoVerde("Elfo Recruta"); 
+        exercito.addElfosValidos(recruta1); 
+        exercito.addElfosValidos(recruta2); 
+        exercito.addElfosValidos(recruta3); 
+        ArrayList<Elfo> resultado = exercito.buscarElfoPorStatus(Status.MORTO); 
+        assertEquals(1, resultado.size()); 
+        assertEquals(recruta2, resultado.get(0)); 
+    } 
+     
+    @Test 
+    public void buscarPorStatusMortoNenhumMorto() { 
+        Exercito exercito = new Exercito(); 
+        Elfo recruta1 = new ElfoVerde("Elfo Recruta"); 
+        Elfo recruta2 = new ElfoNoturno("Elfo Recruta 2"); 
+        Elfo recruta3 = new ElfoVerde("Elfo Recruta"); 
+        exercito.addElfosValidos(recruta1); 
+        exercito.addElfosValidos(recruta2); 
+        exercito.addElfosValidos(recruta3); 
+        assertTrue(exercito.buscarElfoPorStatus(Status.MORTO).isEmpty()); 
+    } 
+ 
+    @Test 
+    public void buscarPorStatusVivoNenhumVivo() { 
+        Exercito exercito = new Exercito(); 
+        Elfo recruta1 = criarElfoNoturnoEMatalo(); 
+        Elfo recruta2 = criarElfoNoturnoEMatalo(); 
+        Elfo recruta3 = criarElfoNoturnoEMatalo(); 
+        exercito.addElfosValidos(recruta1); 
+        exercito.addElfosValidos(recruta2); 
+        exercito.addElfosValidos(recruta3); 
+        assertTrue(exercito.buscarElfoPorStatus(Status.VIVO).isEmpty()); 
+    } 
+     
+    private ElfoNoturno criarElfoNoturnoEMatalo() { 
+        ElfoNoturno suicida = new ElfoNoturno("Elfo kamikaze"); 
+        for (int i = 0; i < 90; i++) 
+            suicida.atirarFlecha(new Dwarf()); 
+        return suicida; 
+    } 
 
 
 }

@@ -3,7 +3,6 @@ public abstract class Personagem {
     protected Inventario inventario;
     protected Status status;
     protected int experiencia;
-    //protected int vida;
     protected double vida;
      
     public Personagem(String nome){

@@ -9,12 +9,16 @@ public class Exercito{
     public void addElfosValidos(Elfo elfo){
          boolean podeAlistar;
          boolean validos = elfo instanceof ElfoVerde || elfo instanceof ElfoNoturno;
-         //<condição> ? <operação 1> : <operação 2>;
+         //outra maneira para verificar se o obj é uma instancia
+         //podeAdicionar = elfo.getClass().getName().equals("ElfoVerde") || elfo.getClass().getName().equals("ElfoNoturno")
          podeAlistar = validos ? elfosAlistados.add(elfo) : false;
     }
     
     public Elfo buscarElfoPorNome(String nomeProcurado){
         boolean achei;
+        //OU for(elfo : contingente)
+        //if(elfo.getNome().equals(nomeProcurado))//nome.equals(elfo.getNome())
+        //return elfoAchado
         for(int i= 0; i < elfosAlistados.size();i++){
             if(elfosAlistados.get(i).getNome().equals(nomeProcurado)){
                 Elfo elfoAchado = elfosAlistados.get(i);

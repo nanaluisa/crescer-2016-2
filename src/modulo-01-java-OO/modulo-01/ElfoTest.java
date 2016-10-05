@@ -3,7 +3,12 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 public class ElfoTest{
-   @Test
+    @After
+    public void tearDown(){
+        System.gc();
+    }
+    
+    @Test
     public void elfoNasceCom42Flechas() {
         // Act
         Elfo elfoDoTeste = new Elfo("Elrond");
@@ -288,5 +293,13 @@ public class ElfoTest{
         Elfo elfo = new Elfo("Cobaia");
         assertEquals(Status.VIVO, elfo.getStatus());
     }
+    
+    @Test 
+    public void contagemDeElfos(){
+         int antesCont = 1+ Elfo.getContadorDeElfos();
+        Elfo elfo = new Elfo("Legolas");
+        assertEquals(antesCont, Elfo.getContadorDeElfos());
+    }
+    
 }
 

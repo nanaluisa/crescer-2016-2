@@ -1,4 +1,13 @@
 public class Elfo extends Personagem{
+    private static int CONTADOR_DE_ELFOS = 0;
+    {
+        CONTADOR_DE_ELFOS ++;
+    }
+    
+    public static int getContadorDeElfos(){
+        return Elfo.CONTADOR_DE_ELFOS;
+    }
+    
     public Elfo(String n) {
         // Chamando construtor debaixo
         this(n, 42);
@@ -11,7 +20,7 @@ public class Elfo extends Personagem{
         this.inventario.adicionarItem(new Item("Flechas", quantidadeFlechas >= 0 ? quantidadeFlechas : 42)); 
         //arco = new Item("Arco", 1);
         //flecha = new Item("Flechas", quantidadeFlechas >= 0 ? quantidadeFlechas : 42);
-    }
+   }
        
     public Item getArco(){
         //return arco;

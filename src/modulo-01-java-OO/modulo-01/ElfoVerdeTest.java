@@ -110,7 +110,7 @@ public class ElfoVerdeTest{
         Item arcoEFlecha = new Item("Arco e Flecha de Vidro", 1); 
         sortudo.adicionarItem(arcoEFlecha); 
         sortudo.adicionarItem(null); 
-        assertEquals(1, sortudo.getInventario().getItens().size()); 
+        assertEquals(2, sortudo.getInventario().getItens().size()); 
         assertEquals(arcoEFlecha, sortudo.getInventario().getItens().get(0)); 
     } 
  

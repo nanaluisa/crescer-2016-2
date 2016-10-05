@@ -1,14 +1,19 @@
 import java.util.ArrayList;
 public class Exercito{
     ArrayList<Elfo> elfosAlistados = new ArrayList<Elfo>();
-    private void addElfosValidos(Elfo elfo){
+    
+    public ArrayList<Elfo> getElfosAlistados(){
+        return elfosAlistados;
+    }    
+    
+    public void addElfosValidos(Elfo elfo){
          boolean podeAlistar;
          boolean validos = elfo instanceof ElfoVerde || elfo instanceof ElfoNoturno;
          //<condição> ? <operação 1> : <operação 2>;
          podeAlistar = validos ? elfosAlistados.add(elfo) : false;
     }
     
-    private Elfo buscarElfoPorNome(String nomeProcurado){
+    public Elfo buscarElfoPorNome(String nomeProcurado){
         boolean achei;
         for(int i= 0; i < elfosAlistados.size();i++){
             if(elfosAlistados.get(i).getNome().equals(nomeProcurado)){

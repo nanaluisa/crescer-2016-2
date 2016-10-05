@@ -16,10 +16,14 @@ public class ExercitoTest{
         ElfoNoturno nigth2 = new ElfoNoturno("Nigth 2");
         ElfoNoturno nigth3 = new ElfoNoturno("Nigth 3");
         //Act
-        //milico.addElfosValidos(green1);
-        
+        milico.addElfosValidos(green1);
+        milico.addElfosValidos(green2);
+        milico.addElfosValidos(green3);
+        milico.addElfosValidos(nigth1);
+        milico.addElfosValidos(nigth2);
+        milico.addElfosValidos(nigth3);
         
         //Assert
-    
+        assertEquals(6, milico.getElfosAlistados().size() );
     }
 }

@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 public class BatalhaoEspecial{
-    //public static void main (String args[]){
+        //public static void main (String args[]){
        //Map<String,String> example = new HashMap<String,String>();
         HashMap<String,Elfo> batalhao; 
          
@@ -13,24 +13,20 @@ public class BatalhaoEspecial{
             return batalhao;
         }
         
-        public void alistar(Elfo elfo){
+        public void alistar(Elfo elfo){ 
              boolean validos = elfo instanceof ElfoVerde || elfo instanceof ElfoNoturno;
              if(validos){
                 batalhao.put(elfo.getNome(), elfo);
              }
         }
        
-         public Elfo buscar(String nome){
-            
-             batalhao.get(nome);
+        public Elfo buscar(String nome){
+             Elfo busca;
+              if (batalhao.containsKey(nome)){
+                   busca = batalhao.get(nome);
+                   return busca;
+             }
              return null;
-             /*
-             for(Elfo elfo : elfosAlistados){
-                if (nomeProcurado.equals(elfo.getNome())){
-                    return elfo;
-                }
-            }
-            return null;    */   
         } 
         
         /*public ArrayList<Elfo> buscar(Status status){
@@ -77,6 +73,6 @@ public class BatalhaoEspecial{
             return resultado;
         }
              */
-    //}
+            //}
  
 }

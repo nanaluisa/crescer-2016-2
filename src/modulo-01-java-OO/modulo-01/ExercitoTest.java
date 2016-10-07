@@ -202,6 +202,34 @@ public class ExercitoTest{
         assertTrue(exercito.buscarElfoPorStatus(Status.VIVO).isEmpty()); 
     } 
      
+    @Test
+    public void ordenarAtaqueVerdesPrimeiro(){
+        Exercito exercito = new Exercito(); 
+        Elfo recruta1 = new ElfoVerde("Elfo Verde 1"); 
+        Elfo recruta2 = new ElfoNoturno("Elfo Noturno 1"); 
+        Elfo recruta3 = new ElfoVerde("Elfo Verde 2");
+        
+        //exercito.getOrdemAtaque();
+        
+        exercito.addElfosValidos(recruta1); 
+        exercito.addElfosValidos(recruta2); 
+        exercito.addElfosValidos(recruta3); 
+        
+        exercito.getOrdemAtaque();
+        
+        ArrayList<Elfo> resultado = exercito.buscarElfoPorStatus(Status.VIVO); 
+        assertEquals(3, resultado.size()); 
+        assertEquals(recruta1, resultado.get(0)); 
+        assertEquals(recruta2, resultado.get(1)); 
+        assertEquals(recruta3, resultado.get(2)); 
+        
+        
+        //getOrdemDeAtaque(List<Elfo> atacantes(){
+    
+    }
+    
+    
+    
     private ElfoNoturno criarElfoNoturnoEMatalo() { 
         ElfoNoturno suicida = new ElfoNoturno("Elfo kamikaze"); 
         for (int i = 0; i < 90; i++) 
@@ -209,5 +237,9 @@ public class ExercitoTest{
         return suicida; 
     } 
 
-
+    
+    
+    
+    
+    
 }

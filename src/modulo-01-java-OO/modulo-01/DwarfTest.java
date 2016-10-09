@@ -8,9 +8,8 @@ public class DwarfTest
 {
     @Test
     public void dwarfNasceCom110Vida() {
-        DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
-        Dwarf gimli = new Dwarf("Gimli",data);
-        assertEquals(110, gimli.getVida(), 0.1);
+        Dwarf gimli = new Dwarf();
+        assertEquals(110, gimli.getVida(), 0.);
     }
 
     @Test
@@ -23,7 +22,7 @@ public class DwarfTest
         DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
         Dwarf gimli = new Dwarf("Gimli",data);
         gimli.perderVida();
-        assertEquals(100, gimli.getVida(), 0.1);
+        assertEquals(100, gimli.getVida(), 0.);
     }
 
     @Test
@@ -32,7 +31,7 @@ public class DwarfTest
         Dwarf gimli = new Dwarf("Gimli",data);
         gimli.perderVida();
         gimli.perderVida();
-        assertEquals(90, gimli.getVida(), 0.1);
+        assertEquals(90, gimli.getVida(), 0.);
         assertEquals(Status.VIVO, gimli.getStatus());
     }
     
@@ -60,8 +59,8 @@ public class DwarfTest
         gimli.perderVida();
         gimli.perderVida();
         gimli.perderVida();
-        assertEquals(0, gimli.getVida(), 0.1);
-
+        assertEquals(0, gimli.getVida(), 0.);
+        assertEquals(Status.MORTO, gimli.getStatus());
     }
     
    
@@ -192,7 +191,7 @@ public class DwarfTest
         gimli.perderVida();
         gimli.perderVida();
         gimli.perderVida();
-        assertEquals(0, gimli.getVida(),0.1);
+        assertEquals(0, gimli.getVida(), 0.);
         assertEquals(Status.MORTO, gimli.getStatus());
     }
 

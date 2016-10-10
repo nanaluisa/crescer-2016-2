@@ -139,25 +139,40 @@ public class ExercitoDeElfosTest {
         exercito.alistar(recruta3);
         assertTrue(exercito.buscar(Status.VIVO).isEmpty());
     }
+    
     @Test
-    public void alistarEOrdenarVerdesPrimeiroDepoisNoturnosPorUltimo(){
+    public void alistarEOrdenarVerdesPrimeiroDepoisNoturnosPorUltimo()throws NaoPodeAlistarException{
         //getOrdemDeAtaque(List<Elfo> atacantes)
         //Arrange
         ExercitoDeElfos exercito = new ExercitoDeElfos();
-        Elfo recruta1 = new ElfoVerde("Elfo Verde 1");
-        Elfo recruta2 = new ElfoNoturno("Elfo Noturno 1");
-        Elfo recruta3 = new ElfoVerde("Elfo Verde 2");
-        Elfo recruta4 = new ElfoNoturno("Elfo Noturno 2");
-        Elfo recruta5 = new ElfoVerde("Elfo Verde 3");
+        Elfo recruta1 = new ElfoVerde("Elfo Verde 1",42);
+        Elfo recruta2 = new ElfoNoturno("Elfo Noturno 1",42);
+        Elfo recruta3 = new ElfoVerde("Elfo Verde 2",42);
+        Elfo recruta4 = new ElfoNoturno("Elfo Noturno 2",42);
+        Elfo recruta5 = new ElfoVerde("Elfo Verde 3",42);
         //Act
-        exercito.alistar(recruta1);
-        exercito.alistar(recruta2);
-        exercito.alistar(recruta3);
-        exercito.alistar(recruta4);
-        exercito.alistar(recruta5);
-        Array alistados = exercito.getContingente();
-        exercito.getOrdemDeAtaque(exercito);
         
+        List<Elfo> alistados = new ArrayList<>();
+        
+        alistados.add(recruta1);
+        alistados.add(recruta2);
+        alistados.add(recruta3);
+        alistados.add(recruta4);
+        alistados.add(recruta5);
+                
+        List<Elfo> ordemAtaque = exercito.getOrdemDeAtaque(alistados);
+        
+        assertEquals(5, ordemAtaque.size());
+        
+        
+        assertEquals(recruta1, ordemAtaque.get(0));
+        /*
+        assertEquals(recruta3, alistados.get(1));
+        assertEquals(recruta5, alistados.get(2));
+        assertEquals(recruta2, alistados.get(3));
+        assertEquals(recruta4, alistados.get(4));
+       
+        */
     }
     
     

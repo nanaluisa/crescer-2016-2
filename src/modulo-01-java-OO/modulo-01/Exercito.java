@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.List;
 public interface Exercito {
     Elfo[] getContingente();
     void alistar(Elfo elfo) throws NaoPodeAlistarException;

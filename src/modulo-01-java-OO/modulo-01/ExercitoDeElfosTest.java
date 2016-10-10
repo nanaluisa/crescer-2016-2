@@ -139,11 +139,39 @@ public class ExercitoDeElfosTest {
         exercito.alistar(recruta3);
         assertTrue(exercito.buscar(Status.VIVO).isEmpty());
     }
-
+    @Test
+    public void alistarEOrdenarVerdesPrimeiroDepoisNoturnosPorUltimo(){
+        //getOrdemDeAtaque(List<Elfo> atacantes)
+        //Arrange
+        ExercitoDeElfos exercito = new ExercitoDeElfos();
+        Elfo recruta1 = new ElfoVerde("Elfo Verde 1");
+        Elfo recruta2 = new ElfoNoturno("Elfo Noturno 1");
+        Elfo recruta3 = new ElfoVerde("Elfo Verde 2");
+        Elfo recruta4 = new ElfoNoturno("Elfo Noturno 2");
+        Elfo recruta5 = new ElfoVerde("Elfo Verde 3");
+        //Act
+        exercito.alistar(recruta1);
+        exercito.alistar(recruta2);
+        exercito.alistar(recruta3);
+        exercito.alistar(recruta4);
+        exercito.alistar(recruta5);
+        Array alistados = exercito.getContingente();
+        exercito.getOrdemDeAtaque(exercito);
+        
+    }
+    
+    
+    
+    
+    
+    
+    //Método
     private ElfoNoturno criarElfoNoturnoEMatalo() {
         ElfoNoturno suicida = new ElfoNoturno("Elfo kamikaze", 90);
         for (int i = 0; i < 90; i++)
             suicida.atirarFlecha(new Dwarf());
         return suicida;
     }
+    
+     
 }

@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class ExercitoDeElfos implements Exercito {
+public class ExercitoDeElfos implements Exercito, Estrategia {
     private ArrayList<Elfo> contingente;
 
     public ExercitoDeElfos() {
@@ -64,5 +64,86 @@ public class ExercitoDeElfos implements Exercito {
     public void atacar() {
         System.out.println("Exército normal atacando");
     }
-
+    
+    public List<Elfo> getOrdemDeAtaque(List<Elfo> atacantes){
+         ArrayList<Elfo> ordemAtaque = new ArrayList<Elfo>();
+            //add primeiro os Verdes vivos.
+         for(int i = 0; i< atacantes.size(); i++){
+             if(atacantes.get(i).getStatus().equals("VIVO") && atacantes.get(i) instanceof ElfoVerde ){
+                 ordemAtaque.add(contingente.get(i));
+             }
+         }      
+            //add depois os Noturnos vivos.
+         for(int i = 0; i< atacantes.size(); i++){
+             if(atacantes.get(i).getStatus().equals("VIVO") && atacantes.get(i) instanceof ElfoNoturno ){
+                 ordemAtaque.add(contingente.get(i));
+             }
+         }
+                /* Percorrer os alistados e verificar condiçoes para ataque, caso tudo OK, coloca na lista.
+                 * 
+                    Exercício 1
+                Noturnos por último!
+                Crie uma estratégia concreta que ordene o contingente de ataque com os seguintes critérios:
+                
+                Somente elfos vivos atacarão.
+                Primeiro sempre atacam os Elfos Verdes.
+                Elfos Noturnos atacam por último.
+                Importante:
+                Não crie várias listas para cada tipo de Elfos, faça bom uso do polimorfismo!
+                   
+                */
+                     
+         return ordemAtaque;
+    }
+        
+    
+    
+    
+    public List<Elfo> getOrdemDeAtaqueIntercalada(List<Elfo> atacantes){
+        int contVerdes = 0;
+        int contNoturnos = 0;
+            
+        //contabilizando o Exército:
+        for(int i = 0; i< atacantes.size(); i++){
+          //boolean verde = atacantes.get(i) instanceof ElfoVerde ? contVerdes++ : contNoturnos++;
+          if(atacantes.get(i)instanceof ElfoVerde){
+              contVerdes++;
+          }else {
+              contNoturnos ++;
+          }
+        }
+            
+            //int cont = atacantes.size()/2;
+        boolean contEquals = contVerdes == contNoturnos;
+            //contVerdes.equals(contNoturnos);
+        if(!contEquals){
+            System.out.println("ContingenteDesproporcionalException");
+        }
+            
+            //for()
+            
+            
+            return null;
+        }
+        
+        
+        /*Ataque intercalado
+    
+            Crie mais uma estratégia concreta de ataque onde:
+            
+            Somente elfos vivos atacarão e, para facilitar a vida do general, a composição do pelotão de ataque deve ter 
+            obrigatoriamente 50% de Elfos Verdes e 50% de Elfos Noturnos. Em caso contrário, lance um erro do tipo 
+            "ContingenteDesproporcionalException".
+            Os ataques ocorrerão de forma intercalada e contínua entre os tipos de elfos.
+            Se um Elfo Verde começa atacando, o próximo ataque deve ser feito por um Elfo Noturno.
+            Se um Elfo Noturno começa atacando, o próximo ataque deve ser feito por um Elfo Verde.
+            Importante:
+            
+            Não crie várias listas para cada tipo de Elfos, faça bom uso do polimorfismo!
+           
+           */
+    
+        
+    
+    
 }

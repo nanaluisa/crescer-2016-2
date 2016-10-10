@@ -4,7 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 import java.util.ArrayList;
 public class ExercitoTest{
-    @Test
+   /* @Test
     public void alistar3ElfosVerdesE3Noturnos(){
         //Arrange
         Exercito milico = new Exercito();
@@ -238,7 +238,7 @@ public class ExercitoTest{
     } 
 
     
-    
+    */
     
     
     

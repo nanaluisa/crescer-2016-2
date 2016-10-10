@@ -41,7 +41,7 @@ public class InventarioTest
         
         inventario.removerItem(new Item("Espada",3));
         
-        assertEquals(0,inventario.getItemAtual());
+        assertEquals(0,inventario.getItens().size());
     }
     /*
     @Test

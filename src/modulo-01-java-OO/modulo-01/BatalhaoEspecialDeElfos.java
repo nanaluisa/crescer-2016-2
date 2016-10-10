@@ -62,13 +62,5 @@ public class BatalhaoEspecialDeElfos implements Exercito, ExercitoQueLimpaItens 
     public void limparItensEspeciais() {
         // vai ter lógica de limpeza de itens especiais
     }
+    
 }
-
-
-
-
-
-
-
-
-

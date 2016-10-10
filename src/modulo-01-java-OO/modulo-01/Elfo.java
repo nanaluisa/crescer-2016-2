@@ -14,6 +14,12 @@ public class Elfo extends Personagem {
         Elfo.contadorDeElfos++;
     }
     
+    protected void inicializarInventario(int quantidadeFlechas) {
+        this.inventario.adicionarItem(new Item("Arco", 1));
+        this.inventario.adicionarItem(new Item("Flechas", quantidadeFlechas >= 0 ? quantidadeFlechas : 42));
+    }
+
+    
     // ~Elfo() { }
     // https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#finalize()
     protected void finalize() throws Throwable {
@@ -52,13 +58,7 @@ public class Elfo extends Personagem {
           flecha.setQuantidade(flecha.getQuantidade()-1);
          }*/
      
-    }
-
-    protected void inicializarInventario(int quantidadeFlechas) {
-        this.inventario.adicionarItem(new Item("Arco", 1));
-        this.inventario.adicionarItem(new Item("Flechas", quantidadeFlechas >= 0 ? quantidadeFlechas : 42));
-    }
-
+   
     public String toString() {
         //return "<nome> possui <flechas> flechas e <exp> níveis de experiência.";
         boolean experienciaNoSingular = this.experiencia == 0 || this.experiencia == 1;

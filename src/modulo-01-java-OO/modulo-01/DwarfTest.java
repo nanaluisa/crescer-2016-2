@@ -69,7 +69,7 @@ public class DwarfTest
         DataTerceiraEra data = new DataTerceiraEra(20,12,2016);
         Dwarf seixas = new Dwarf("Seixas",data);
         
-        seixas.getNumeroDaSorte();
+        seixas.getNumeroSorte();
         
         assertEquals(110, seixas.getVida(), 0.1);
         

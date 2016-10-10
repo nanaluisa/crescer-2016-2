@@ -20,8 +20,8 @@ public class ElfoNoturno extends Elfo {
             this.status = (int)this.vida == 0 ? Status.MORTO : this.status;
         }
     }
-}
-        //adicionei +1 na experiência, pois como chamei o atirar flecha da super,lá a experiencia já recebe 1, 
+
+    /*    //adicionei +1 na experiência, pois como chamei o atirar flecha da super,lá a experiencia já recebe 1, 
         // e aqui recebe +2 do Elfo Noturno.
         experiencia += 2;
         this.vida -= (vida * 0.05);
@@ -34,4 +34,5 @@ public class ElfoNoturno extends Elfo {
         this.status = this.vida < 1 ? Status.MORTO : this.status;//ternary operator para verificação do status.
         //this.status = (int)this.vida == 0 ? Status.MORTO : this.status;
     }
+    }*/
 }

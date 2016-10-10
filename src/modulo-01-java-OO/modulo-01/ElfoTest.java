@@ -214,8 +214,8 @@ public class ElfoTest {
         Dwarf gloin = new Dwarf("Dwarf",data);
         elfo.atirarFlecha(balin);
         elfo.atirarFlecha(gloin);
-        assertEquals(100, balin.getVida(), 0.);
-        assertEquals(100, gloin.getVida(), 0.);
+        assertEquals(100., balin.getVida(), 0.);
+        assertEquals(100., gloin.getVida(), 0.);
     }
 
     @Test

@@ -97,7 +97,32 @@ public class ExercitoDeElfos implements Exercito, Estrategia {
                 */
     }
         
-    public List<Elfo> getOrdemDeAtaqueIntercalada(List<Elfo> atacantes) throws ExercitoNaoAtingiuExeption{
+    public List<Elfo> getOrdemDeAtaqueIntercalada(List<Elfo> atacantes) throws ExercitoNaoAtingiuException{
+        int contVerdes = 0;
+        int contNoturnos = 0;
+        //contabilizando o Exército: somente os vivos, verdes ou noturnos:        
+        for(int i = 0; i< atacantes.size(); i++){
+          if(atacantes.get(i)instanceof ElfoVerde || atacantes.get(i)instanceof ElfoNoturno && atacantes.get(i).getStatus().equals(Status.VIVO)){
+              if(atacantes.get(i)instanceof ElfoVerde){
+                  contVerdes++;
+              }else {
+                  contNoturnos ++;
+            }
+          }
+        }
+        
+        double media = (int)atacantes.size() * 0.5; 
+        boolean atingiu = media == contVerdes && media == contNoturnos;
+        if(!atingiu){
+            throw new ExercitoNaoAtingiuException();
+        }
+        
+        
+        
+        
+        
+        
+        
         return null;
     }
         
@@ -110,7 +135,7 @@ public class ExercitoDeElfos implements Exercito, Estrategia {
           OK          obrigatoriamente 50% de Elfos Verdes e 50% de Elfos Noturnos. Em caso contrário, lance um erro do tipo 
                     "ContingenteDesproporcionalException".
            
-            Os ataques ocorrerão de forma intercalada e contínua entre os tipos de elfos.
+     TO-DO -->       Os ataques ocorrerão de forma intercalada e contínua entre os tipos de elfos.
             Se um Elfo Verde começa atacando, o próximo ataque deve ser feito por um Elfo Noturno.
           
             //dois ifs verificando quem começa e assim ordenar a chamada!

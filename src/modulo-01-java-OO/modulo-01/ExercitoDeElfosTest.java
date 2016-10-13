@@ -289,7 +289,64 @@ public class ExercitoDeElfosTest {
         
     }
     
+        
+    @Test
+    public void pelotaoElfosVerdesENoturnosPorcentagem50()throws ExercitoNaoAtingiuException{
+        ExercitoDeElfos exercito = new ExercitoDeElfos();
+        Elfo recruta1 = new ElfoNoturno("Elfo Noturno 1",42);
+        Elfo recruta2 = new ElfoNoturno("Elfo Noturno 2",42);
+        Elfo recruta3 = new ElfoNoturno("Elfo Noturno 3",42);
+        Elfo recruta4 = new ElfoVerde("Elfo Verde 1",42);
+        Elfo recruta5 = new ElfoVerde("Elfo Verde 2",42);
+        Elfo recruta6 = new ElfoVerde("Elfo Verde 3",42);
+        
+        List<Elfo> alistados = new ArrayList<>();
+        alistados.add(recruta1);
+        alistados.add(recruta2);
+        alistados.add(recruta3);
+        alistados.add(recruta4);
+        alistados.add(recruta5);
+        alistados.add(recruta6); 
+        
+        List<Elfo> ordemAtaque = new ArrayList<>();
+        ordemAtaque = exercito.getOrdemDeAtaqueIntercalada(alistados);
+        assertEquals(6, alistados.size());
+        
+    }
     
+    @Test//(expected=ExercitoNaoAtingiuException.class)
+    public void pelotaoElfosVerdesENoturnosNaoAtingiuAPorcentagem()throws ExercitoNaoAtingiuException{
+       try { 
+            ExercitoDeElfos exercito = new ExercitoDeElfos();
+            Elfo recruta1 = new ElfoNoturno("Elfo Noturno 1",42);
+            Elfo recruta2 = new ElfoNoturno("Elfo Noturno 2",42);
+            Elfo recruta3 = new ElfoNoturno("Elfo Noturno 3",42);
+            Elfo recruta4 = new ElfoVerde("Elfo Verde 1",42);
+            Elfo recruta5 = new ElfoVerde("Elfo Verde 2",42);
+            Elfo recruta6 = new ElfoVerde("Elfo Verde 3",42);
+            Elfo recruta7 = new ElfoVerde("Elfo Verde 4",42);
+            Elfo recruta8 = new ElfoVerde("Elfo Verde 5",42);
+            
+            List<Elfo> alistados = new ArrayList<>();
+            alistados.add(recruta1);
+            alistados.add(recruta2);
+            alistados.add(recruta3);
+            alistados.add(recruta4);
+            alistados.add(recruta5);
+            alistados.add(recruta6); 
+            alistados.add(recruta7);
+            alistados.add(recruta8);
+            
+            List<Elfo> ordemAtaque = new ArrayList<>();
+            ordemAtaque = exercito.getOrdemDeAtaqueIntercalada(alistados);
+            assertEquals(8, alistados.size());
+        } catch (ExercitoNaoAtingiuException exercitoNaoAtingiuException) { 
+            System.out.println( 
+                exercitoNaoAtingiuException.getMessage() +  
+                exercitoNaoAtingiuException.getStackTrace() 
+            ); 
+       }
+    }
     
     
     

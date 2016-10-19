@@ -1,0 +1,32 @@
+
+
+ Select IDEmpregado,
+		NomeEmpregado,
+		IDDepartamento,
+		Salario,
+		Salario*12 as SalarioAnual --apelido para a coluna
+from Empregado;
+--where IDDepartamento IS NULL -- buscando campos nulos, =![where IDDepartamento = NULL] pois assim, não traria NADA na busca!
+
+Order by NomeEmpregado
+-- COST. a busc
+-- Order by Slario desc, nomeEmpregado desc
+-- Order by 2,3 desc (não é indcado buscar pelo numero da coluna)
+
+Select * from Empregado;
+
+-- Busca 1:
+
+Select NomeEmpregado,
+from Empregado;
+Order by DataAdmissao;
+
+-- Busca 2:
+
+Select NomeEmpregado,
+	   Salario*12 as SalarioAnual
+
+From Empregado;
+Order by DataAdmissao,
+where Cargo LIKE 'Atendente'
+	and SalarioAnual < 18500.00;	

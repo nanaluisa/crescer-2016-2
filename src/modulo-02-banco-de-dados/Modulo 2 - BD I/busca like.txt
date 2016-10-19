@@ -1,0 +1,5 @@
+Select IDCidade,
+	   Nome,
+	   UF,
+from Cidade;
+Where Nome like '%R%' -- que tenha R em qualquer Parte(Inicio 'R%' no Final '%R')

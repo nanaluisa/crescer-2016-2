@@ -1,0 +1,124 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B93362D3-70D1-63E9-7A3A-5F87EE39974F" name="Eleitor">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:48:56 UTC</createdTime>
+<generatorID>8479EFDA-22DC-EDC6-C3B0-761B0560B4C1</generatorID>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<ordsAlias>entity_2</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDEleitor" id="D85C151E-EFD1-9DA9-F710-5B46E480AAD1">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:59:47 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NomeCompleto" id="60BF3EE1-44FD-BDB4-34D2-E9ACE203FF22">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:59:47 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TituloEleitor" id="B3E7C0D6-98F0-EB3D-E82E-197CF504C750">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:59:47 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RG" id="2706B565-07EE-5672-6DF3-CE513D75EC04">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:59:47 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataNascimento" id="D9725F1B-D8AB-ED10-1C4F-AFEDCBA05F9D">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:59:47 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Zona" id="E536E5DA-C20C-6D35-5E46-D4679B732F33">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:59:47 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Secao" id="B1483A12-A19A-72A0-303C-2627BD6601B0">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:59:47 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>10</dataTypeSize>
+<ownDataTypeParameters>10,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Votou" id="F387B5EE-642C-E82D-63D1-A654724ED685">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:16:46 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2E789C6D-93ED-D3C6-E449-2202CF41FCF7" name="Entity_2_PK">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:59:47 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D85C151E-EFD1-9DA9-F710-5B46E480AAD1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="29177E3D-49AB-75E3-BCA7-EF3DBD86E353" name="Eleitor__UN">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:04:10 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="2706B565-07EE-5672-6DF3-CE513D75EC04"/>
+<colUsage columnID="B3E7C0D6-98F0-EB3D-E82E-197CF504C750"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

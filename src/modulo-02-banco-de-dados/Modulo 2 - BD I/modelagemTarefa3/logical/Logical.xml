@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="4AE2CAF2-9F23-8D4B-C992-24A05BC650BC" mainViewID="BC1E5C7B-8E0E-57BA-A8B4-3114B88913CA">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:47:38 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

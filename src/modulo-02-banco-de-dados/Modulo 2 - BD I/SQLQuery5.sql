@@ -1,0 +1,18 @@
+Create Table Produto(
+	IDProduto	 int identity not null,
+	Nome		 varchar(20) not null,
+	Descricao	 varchar (60) not null,
+	DataCriacao  datetime default getdate() not null,
+	LocalEstoque varchar (30) not null,
+	Quantidade	 decimal (7,3) not null,
+	Preco		 decimal (7,2) not null, -- 99999,99 ( máx. 7 números dos quais 2 são decimais)
+		constraint PK_Produto primary key(IDProduto)
+);
+
+Insert into Produto 
+	(Nome, Descricao, LocalEstoque, Quantidade, Preco)
+	values
+	('Arroz Branco',' Arroz tipo 1 5kg', 'BlueVille', 80.00, 12.65);
+
+	Select * from Produto;
+

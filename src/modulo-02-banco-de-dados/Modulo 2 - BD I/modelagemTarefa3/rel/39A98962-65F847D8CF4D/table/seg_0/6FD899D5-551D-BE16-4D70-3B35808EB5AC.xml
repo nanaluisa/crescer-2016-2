@@ -1,0 +1,187 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="6FD899D5-551D-BE16-4D70-3B35808EB5AC" name="Candidatos">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:48:56 UTC</createdTime>
+<generatorID>CEFFD65B-A579-801D-BFAA-E5DEA7DA2E1E</generatorID>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<ordsAlias>entity_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDCandidato" id="3732EBC1-4E95-5512-1082-5D4A4A906F35">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:50:01 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NomeCompleto" id="B1EE4D8D-EAE2-642C-BE39-0C157781B5B3">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:49:47 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NomePopular" id="5BFC87E6-B8D3-E855-3C43-F329BA5DB821">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:50:46 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>60</dataTypeSize>
+<ownDataTypeParameters>60,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DataNascimento" id="1EA8B344-DCA4-EF34-B03E-16564E76282F">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:51:06 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="RegistroTRE" id="AA83AB7E-CC99-BC92-809F-9DC8A2495929">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:52:37 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Foto" id="9CB7EE23-920F-58B7-58EB-1A89E1F827B6">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:55:14 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>200</dataTypeSize>
+<ownDataTypeParameters>200,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Cargo_IDCargo" id="79EBE702-22C6-17E0-6AD5-9CA3A521A135">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:21:44 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2D291A80-E527-A6A2-4443-FE836C8C9416" referredColumn="4AB8940F-20F3-60FB-FECE-5BC13C8B5DEA"/>
+</associations>
+</Column>
+<Column name="UF_IDUf" id="B29695F8-028A-49D3-5EE2-914FD097D315">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:34:11 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="444154E6-4D05-358A-D656-F85D3D883D86" referredColumn="E9C644D3-2F9B-980F-E46B-BB67096F707F"/>
+</associations>
+</Column>
+<Column name="Cidade_IDCidade" id="6FC92B62-2682-B0D0-BBE6-100E279C9231">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:34:17 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="847DE3DB-68E0-7973-FDDC-3B0B8FFD69CE" referredColumn="30B8FB8D-35F7-1F95-38BE-7DD680E6FD31"/>
+</associations>
+</Column>
+<Column name="Partido_IDPartido" id="54F4FEE6-5554-7E45-B261-696431189826">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:35:07 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="50CED3E0-A918-E7B2-F437-2775FFFE69AE" referredColumn="C8EBB7C4-629C-9E80-CBE5-806F35049AFD"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9424CCF6-F554-9DDD-D99A-E58739D02416" name="Candidatos_PK">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 18:50:01 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3732EBC1-4E95-5512-1082-5D4A4A906F35"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="D66D2016-CDC8-2E6C-CF01-34BF07CB266C" name="Candidatos_Cargo_FK">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:21:44 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="79EBE702-22C6-17E0-6AD5-9CA3A521A135"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="08D498A8-F4D1-06E0-D717-70590A13C359" name="Candidatos_UF_FK">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:34:11 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B29695F8-028A-49D3-5EE2-914FD097D315"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CC8E487E-F1A6-5767-1DC3-326A5531F8E0" name="Candidatos_Cidade_FK">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:34:17 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6FC92B62-2682-B0D0-BBE6-100E279C9231"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="46F4AA4C-C316-5ED5-877A-C39ADEFE9B50" name="FK_Candidatos_Partido">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:35:07 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="54F4FEE6-5554-7E45-B261-696431189826"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AD745E07-E41A-95C2-52D9-AEB4A3AEF314" name="Voto">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:07:59 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDVoto" id="879123B0-6A32-0F04-98F6-16CE2914DBBA">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:09:07 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Quantidade" id="D012A91C-42F8-5E8D-6B63-F4AB89EE91B9">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:26:29 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Candidatos_IDCandidato" id="4067841C-525D-9018-EE0D-C88254F8F2AB">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:22:40 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D7EA98E9-C615-7045-9B13-7F6E9ECEC4D1" referredColumn="3732EBC1-4E95-5512-1082-5D4A4A906F35"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="6775F292-59D6-7F58-C3A3-4F26EABCD637" name="Voto_PK">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:09:46 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="879123B0-6A32-0F04-98F6-16CE2914DBBA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CAC6919A-669D-1759-4051-AA13078D3BEF" name="FK_Voto_Candidatos">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:22:40 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4067841C-525D-9018-EE0D-C88254F8F2AB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

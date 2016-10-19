@@ -1,0 +1,54 @@
+Tarefa 2 
+Desenho OK
+
+1. 
+
+select empregado, count(1) total_Participacoes_Projeto
+	from projeto
+	group by empregado
+	having count(1) > 1;
+
+---
+2.
+
+select distinct Projeto, ValorPrevisto, ValorFaturado
+	from projeto
+	-- Não é legal de se fazer isto !  where ValorFaturado - ValorRealizdo > 0
+	where ValorFaturado >= ValorRealizado
+
+----
+3.
+
+select distinct Projeto, ValorPrevisto, ValorFaturado
+	from projeto
+	where ValorFaturado < ValorRealizado
+
+---
+4.
+
+select --substring(empregado 1,3) primeiro_nome_de_3
+			substring(empregado, 1, charindex(' ', empregado)) primeiro_nome,empregado
+			--charindex(' ', empregado) primeiro_espaco 
+	from projeto
+
+
+---
+ EXEMPLO DE USO DO ISNULL
+(ALGO + NULL == NULL)
+[
+select nomeEmpregado,
+		   salario,
+		   comissao,
+		   (salario + comissao,0) total_mes
+	from empregado
+]
+
+
+select nomeEmpregado,
+		   salario,
+		   ISNULL(comissao,0) comissao,
+		   (salario + ISNULL(comissao,0)) total_mes
+	from empregado
+
+
+

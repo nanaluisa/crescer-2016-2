@@ -153,30 +153,200 @@ public class ExercitoDeElfosTest {
         //Act
         
         List<Elfo> alistados = new ArrayList<>();
-        
         alistados.add(recruta1);
         alistados.add(recruta2);
         alistados.add(recruta3);
         alistados.add(recruta4);
         alistados.add(recruta5);
                 
-        List<Elfo> ordemAtaque = exercito.getOrdemDeAtaque(alistados);
+        List<Elfo> ordemAtaque = new ArrayList<>();
+        ordemAtaque = exercito.getOrdemDeAtaque(alistados);
         
-        assertEquals(5, ordemAtaque.size());
-        
+        assertEquals(5, alistados.size());
         
         assertEquals(recruta1, ordemAtaque.get(0));
-        /*
-        assertEquals(recruta3, alistados.get(1));
-        assertEquals(recruta5, alistados.get(2));
-        assertEquals(recruta2, alistados.get(3));
-        assertEquals(recruta4, alistados.get(4));
+        assertEquals(recruta3, ordemAtaque.get(1));
+        assertEquals(recruta5, ordemAtaque.get(2));
+        assertEquals(recruta2, ordemAtaque.get(3));
+        assertEquals(recruta4, ordemAtaque.get(4));
+    }
+    
+    
+    @Test
+    public void ordenar5ElfosNoturnosPorUltimo()throws NaoPodeAlistarException{
+        //Arrange
+        ExercitoDeElfos exercito = new ExercitoDeElfos();
+        
+        Elfo recruta1 = new ElfoNoturno("Elfo Noturno 1",42);
+        Elfo recruta2 = new ElfoNoturno("Elfo Noturno 2",42);
+        Elfo recruta3 = new ElfoNoturno("Elfo Noturno 3",42);
+        Elfo recruta4 = new ElfoNoturno("Elfo Noturno 4",42);
+        Elfo recruta5 = new ElfoNoturno("Elfo Noturno 5",42);
+        Elfo recruta6 = new ElfoVerde("Elfo Verde 1",42);
+        Elfo recruta7 = new ElfoVerde("Elfo Verde 2",42);
+        Elfo recruta8 = new ElfoVerde("Elfo Verde 3",42);
+        //Act
+        
+        List<Elfo> alistados = new ArrayList<>();
+        alistados.add(recruta1);
+        alistados.add(recruta2);
+        alistados.add(recruta3);
+        alistados.add(recruta4);
+        alistados.add(recruta5);
+        alistados.add(recruta6);
+        alistados.add(recruta7);
+        alistados.add(recruta8);
+                
+        List<Elfo> ordemAtaque = new ArrayList<>();
+        ordemAtaque = exercito.getOrdemDeAtaque(alistados);
+        
+        assertEquals(8, alistados.size());
+        
+        assertEquals(recruta6, ordemAtaque.get(0));
+        assertEquals(recruta7, ordemAtaque.get(1));
+        assertEquals(recruta8, ordemAtaque.get(2));
+        assertEquals(recruta1, ordemAtaque.get(3));
+        assertEquals(recruta2, ordemAtaque.get(4));
+        assertEquals(recruta3, ordemAtaque.get(5));
+        assertEquals(recruta4, ordemAtaque.get(6));
+        assertEquals(recruta5, ordemAtaque.get(7));
+        
+    }
+    
+    @Test
+    public void ordenar5ElfosNoturnosSomente()throws NaoPodeAlistarException{
+        //Arrange
+        ExercitoDeElfos exercito = new ExercitoDeElfos();
+        
+        Elfo recruta1 = new ElfoNoturno("Elfo Noturno 1",42);
+        Elfo recruta2 = new ElfoNoturno("Elfo Noturno 2",42);
+        Elfo recruta3 = new ElfoNoturno("Elfo Noturno 3",42);
+        Elfo recruta4 = new ElfoNoturno("Elfo Noturno 4",42);
+        Elfo recruta5 = new ElfoNoturno("Elfo Noturno 5",42);
+        
+        List<Elfo> alistados = new ArrayList<>();
+        alistados.add(recruta1);
+        alistados.add(recruta2);
+        alistados.add(recruta3);
+        alistados.add(recruta4);
+        alistados.add(recruta5);
+        
+        List<Elfo> ordemAtaque = new ArrayList<>();
+        ordemAtaque = exercito.getOrdemDeAtaque(alistados);
+        
+        assertEquals(5, alistados.size());
+        
+        assertEquals(recruta1, ordemAtaque.get(0));
+        assertEquals(recruta2, ordemAtaque.get(1));
+        assertEquals(recruta3, ordemAtaque.get(2));
+        assertEquals(recruta4, ordemAtaque.get(3));
+        assertEquals(recruta5, ordemAtaque.get(4));
        
-        */
     }
     
     
     
+    @Test
+    public void elfosNoturnosPorUltimoJaOrdenado()throws NaoPodeAlistarException{
+        //Arrange
+        ExercitoDeElfos exercito = new ExercitoDeElfos();
+        
+        Elfo recruta6 = new ElfoVerde("Elfo Verde 1",42);
+        Elfo recruta7 = new ElfoVerde("Elfo Verde 2",42);
+        Elfo recruta8 = new ElfoVerde("Elfo Verde 3",42);
+        Elfo recruta1 = new ElfoNoturno("Elfo Noturno 1",42);
+        Elfo recruta2 = new ElfoNoturno("Elfo Noturno 2",42);
+        Elfo recruta3 = new ElfoNoturno("Elfo Noturno 3",42);
+        Elfo recruta4 = new ElfoNoturno("Elfo Noturno 4",42);
+        Elfo recruta5 = new ElfoNoturno("Elfo Noturno 5",42);
+        
+        //Act
+        
+        List<Elfo> alistados = new ArrayList<>();
+        alistados.add(recruta6);
+        alistados.add(recruta7);
+        alistados.add(recruta8);
+        alistados.add(recruta1);
+        alistados.add(recruta2);
+        alistados.add(recruta3);
+        alistados.add(recruta4);
+        alistados.add(recruta5);
+        
+                
+        List<Elfo> ordemAtaque = new ArrayList<>();
+        ordemAtaque = exercito.getOrdemDeAtaque(alistados);
+        
+        assertEquals(8, alistados.size());
+        
+        assertEquals(recruta6, ordemAtaque.get(0));
+        assertEquals(recruta7, ordemAtaque.get(1));
+        assertEquals(recruta8, ordemAtaque.get(2));
+        assertEquals(recruta1, ordemAtaque.get(3));
+        assertEquals(recruta2, ordemAtaque.get(4));
+        assertEquals(recruta3, ordemAtaque.get(5));
+        assertEquals(recruta4, ordemAtaque.get(6));
+        assertEquals(recruta5, ordemAtaque.get(7));
+        
+    }
+    
+        
+    @Test
+    public void pelotaoElfosVerdesENoturnosPorcentagem50()throws ExercitoNaoAtingiuException{
+        ExercitoDeElfos exercito = new ExercitoDeElfos();
+        Elfo recruta1 = new ElfoNoturno("Elfo Noturno 1",42);
+        Elfo recruta2 = new ElfoNoturno("Elfo Noturno 2",42);
+        Elfo recruta3 = new ElfoNoturno("Elfo Noturno 3",42);
+        Elfo recruta4 = new ElfoVerde("Elfo Verde 1",42);
+        Elfo recruta5 = new ElfoVerde("Elfo Verde 2",42);
+        Elfo recruta6 = new ElfoVerde("Elfo Verde 3",42);
+        
+        List<Elfo> alistados = new ArrayList<>();
+        alistados.add(recruta1);
+        alistados.add(recruta2);
+        alistados.add(recruta3);
+        alistados.add(recruta4);
+        alistados.add(recruta5);
+        alistados.add(recruta6); 
+        
+        List<Elfo> ordemAtaque = new ArrayList<>();
+        ordemAtaque = exercito.getOrdemDeAtaqueIntercalada(alistados);
+        assertEquals(6, alistados.size());
+        
+    }
+    
+    @Test//(expected=ExercitoNaoAtingiuException.class)
+    public void pelotaoElfosVerdesENoturnosNaoAtingiuAPorcentagem()throws ExercitoNaoAtingiuException{
+       try { 
+            ExercitoDeElfos exercito = new ExercitoDeElfos();
+            Elfo recruta1 = new ElfoNoturno("Elfo Noturno 1",42);
+            Elfo recruta2 = new ElfoNoturno("Elfo Noturno 2",42);
+            Elfo recruta3 = new ElfoNoturno("Elfo Noturno 3",42);
+            Elfo recruta4 = new ElfoVerde("Elfo Verde 1",42);
+            Elfo recruta5 = new ElfoVerde("Elfo Verde 2",42);
+            Elfo recruta6 = new ElfoVerde("Elfo Verde 3",42);
+            Elfo recruta7 = new ElfoVerde("Elfo Verde 4",42);
+            Elfo recruta8 = new ElfoVerde("Elfo Verde 5",42);
+            
+            List<Elfo> alistados = new ArrayList<>();
+            alistados.add(recruta1);
+            alistados.add(recruta2);
+            alistados.add(recruta3);
+            alistados.add(recruta4);
+            alistados.add(recruta5);
+            alistados.add(recruta6); 
+            alistados.add(recruta7);
+            alistados.add(recruta8);
+            
+            List<Elfo> ordemAtaque = new ArrayList<>();
+            ordemAtaque = exercito.getOrdemDeAtaqueIntercalada(alistados);
+            assertEquals(8, alistados.size());
+        } catch (ExercitoNaoAtingiuException exercitoNaoAtingiuException) { 
+            System.out.println( 
+                exercitoNaoAtingiuException.getMessage() +  
+                exercitoNaoAtingiuException.getStackTrace() 
+            ); 
+       }
+    }
     
     
     

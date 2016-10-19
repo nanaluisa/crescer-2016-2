@@ -70,4 +70,12 @@ where IDProduto not in(Select IDProduto
 
 
 --6)Identifique qual o estado (coluna UF da tabela Cidade) possuí o maior número de clientes (tabela Cliente), 
---liste também qual o Estado possuí o menor número de clientes.
+--liste também qual o Estado possuí o menor número de clientes.--mostra apenas o idcidade
+Select top 1 WITH TIES
+       IDCidade,
+       Count(1) Clientes_por_UF
+From   Cliente
+Group  by IDCidade
+Order  by Clientes_por_UF desc;
+
+select*from Cliente

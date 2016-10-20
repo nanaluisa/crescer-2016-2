@@ -1,0 +1,21 @@
+/*
+Fazer:
+http://www.maujor.com/tutorial/seletores-css3.php
+
+*/
+
+
+
+
+
+/* div.box{
+color: deeppink;
+}*/
+
+h2 + p:not(span){
+
+    background-color: red;
+}
+
+
+

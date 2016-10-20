@@ -1,0 +1,28 @@
+body {
+    background-image: url(http://assets1.ignimgs.com/thumbs/userUploaded/2016/2/13/streetfighter51280-1455414287741.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: arial;
+}
+
+div .menu{
+    list-style-type: none;
+    margin: 0;
+    padding-left: 80px;
+
+}
+
+div .item{
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 25px 20px;
+    text-decoration: none;
+}
+
+div .menu .item > a{
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                font-family: arial;
+}

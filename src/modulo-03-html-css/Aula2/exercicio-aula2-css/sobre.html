@@ -2,138 +2,79 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Exercicio Aula 1</title>
+    <link rel="stylesheet" href="estilo.css">
+    <title>Exercicio Aula 2 - CSS</title>
+
 </head>
-<body style="background: url(http://assets1.ignimgs.com/thumbs/userUploaded/2016/2/13/streetfighter51280-1455414287741.jpg) center top no-repeat;
-            font-family: arial;"> 
- </style>
-<!--Div Menu - Arrumar os links!! -->
-<div style ="   border-style: solid;
-                border-width: thin;
-                border-color: #ddd;
-                border-radius: 15px;
-                height: 65px;
-                width: 600px;
-                background-color: rgba(221, 221, 221, 0.4);
-                margin: 250px auto 51px;">
 
-<ul style = "
-    list-style-type: none;
-    margin: 0;
-    padding-left: 80px;
-    ">
+<body>
 
+<div class="menu">
+  <span class="item">
+     <a href = "inicio.html"> Início </a>
+  </span>
 
-    <li style = " 
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 25px 20px;
-    text-decoration: none;">
-    <a style = "color: white;
-                text-decoration: none;
-                font-weight: bold;
-                font-family: arial;" 
-        href = "inicio.html"> Início </a> </li>
-       
-    <li style = " 
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 25px 20px;
-    text-decoration: none;">
-    <a style = "color: white;
-                text-decoration: none;
-                font-weight: bold;
-                font-family: arial;" 
-        href = "https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=street+fighter&safe=active&tbm=nws" target="_blank"> Notícias </a></li>
-    
-    <li style = " 
-    display: inline-block;
-    color: white;
-    text-align: center;
-     padding: 25px 20px;
-    text-decoration: none;">
-    <a style = "color: white;
-                text-decoration: none;
-                font-weight: bold;
-                font-family: arial;" 
-        href = "ficha-tecnica.html"> Ficha Técnica</a>  </li>
-        
-    <li style = " 
-    display: inline-block;
-    color: white;
-    text-align: center;
-     padding: 25px 20px;
-    text-decoration: none;">
-    <a style = "color: white;
-                text-decoration: none;
-                font-weight: bold;
-                font-family: arial;" 
-        href = "sobre.html"> Sobre</a>  </li>
-     
+  <span class="item">
+    <a href = "https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=street+fighter&safe=active&tbm=nws" target="_blank"> Notícias </a>
+  </span>
 
-</ul>
+  <span class="item">
+    <a href = "ficha-tecnica.html"> Ficha Técnica</a>
+  </span>
 
-</div> 
+  <span class="item">
+    <a href = "sobre.html"> Sobre</a>
+  </span>
 
+</div>
 
-
+<div class="conteudo">
 <!--Div Sobre -->
-<div style="background-color: #404040;
-            padding:9px 20px;
-            color: #DCDCDC;
-            margin-left: 30px;
-            margin-right: 30px;">
+<div class="titulo">
   <h1>Sobre</h1>
 
 </div>
-  
 
-<div style="background-color:#DCDCDC;
-            padding: 15px;
-            margin-left: 30px;
-            margin-right: 30px;">
 
-  
+<div class="corpo">
+
+
 <h1 id="sobre">Anna Silva</h1>
-  
+
 <table>
   <tr>
     <td>
-        <img src="imagens\girl-in-tech.jpg" alt="Girl-HigthTech"/>
+
+        <img id="imagem" src="imagens\girl-in-tech.jpg" alt="Girl-HigthTech"/>
     </td>
-    
+
     <td> <p>
             <strong>Nome Completo:</strong> Anna Luísa de Oliveira da Silva </br>
-            <strong>Nascimento:</strong> 17 de março de 1997.</br> 
+            <strong>Nascimento:</strong> 17 de março de 1997.</br>
             <strong>Altura:</strong> 153cm. <br>
-            <strong>Filiação:</strong> Luís Fernando e Adelaide da Silva.  <br> 
+            <strong>Filiação:</strong> Luís Fernando e Adelaide da Silva.  <br>
             <strong>País de Origem:</strong> Brasil. <br>
             <strong>Cidade Natal:</strong> Sapiranga / RS. <br>
             <strong>Área de Formação:</strong> Tecnologia da Informação. <br>
             <strong>Universidade:</strong> Unisinos. <br>
-            <strong>Habilidades especiais:</strong> Comunicativa, criativa, amigável. <br> 
+            <strong>Habilidades especiais:</strong> Comunicativa, criativa, amigável. <br>
             <strong>Gosta:</strong> Comida caseira de minha mãe. <br>
             <strong>Desgosta:</strong> Pão de queijo e marshmallow. <br>
             <strong>Bebida Predileta:</strong> Chimarrão e Suco de Laranja, não os dois de uma vez, se não dá Jabulani!<br>
-            <strong>Frase:</strong> "Live each day with a thankful heart". <br> 
+            <strong>Frase:</strong> "Live each day with a thankful heart". <br>
             <strong>Uma fala de vitória:</strong> "Turn down for what?" B)  hahaha'<br>
             <strong>Nickname:</strong> "Anninha". <br>
             <strong>Mentor:</strong> Jesus Cristo. <br>
             <strong>Hobbies:</strong> Escutar música, ler. <br>
             <strong>Bandas Favoritas:</strong> Casting Crowns, Third Day, Jeremy Camp, Planetshakers, MercyMe, Newsboys... <br>
-            <strong>Objetivo desta Page:</strong> Pôr em prática o aprendizado que estou recebendo no Módulo 3, atrávez do treinamento 
+            <strong>Objetivo desta Page:</strong> Pôr em prática o aprendizado que estou recebendo no Módulo 3, atrávez do treinamento
             do Projeto Crescer realizado pelos proficionais da CWI Software. <br>
-        </p> 
-    </td> 
+        </p>
+    </td>
   </tr>
- 
-</table>
-   
-</div>
 
+</table>
+</div>
+</div>
 </body>
 </html>
-
-

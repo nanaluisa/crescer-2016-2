@@ -1,28 +1,47 @@
-body {
+body{
     background-image: url(http://assets1.ignimgs.com/thumbs/userUploaded/2016/2/13/streetfighter51280-1455414287741.jpg);
-    background-position: center;
+    background-position:top;
     background-repeat: no-repeat;
-    font-family: arial;
+    font-family: Helvetica, arial, sans-serif;
 }
 
-div .menu{
-    list-style-type: none;
-    margin: 0;
-    padding-left: 80px;
+ .menu{
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    background-color:rgba(211, 211, 211, 0.5);
+    display: table;
+    padding: 15px;
+    margin: 250px auto 0px;
+  }
 
-}
+       .menu > .item{
+        margin:25px;
+        }
 
-div .item{
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 25px 20px;
-    text-decoration: none;
-}
+              .menu >.item > a{
+                      color:#FFF;
+                      text-decoration: none;
+                      font-weight: bold;
+                    }
+.conteudo {
+        margin: 70px auto;
+        width: 800px;
+        background: #eee;
+    }
+           .conteudo .titulo {
+               padding: 1px 20px;
+               font-size: 14px;
+               background: #5a5a5a;
+               color: #eee;
+           }
 
-div .menu .item > a{
-                color: white;
-                text-decoration: none;
-                font-weight: bold;
-                font-family: arial;
+           .conteudo .corpo {
+               padding: 15px;
+               min-height: 300px;
+               overflow: auto; /* hack pro elemento considerar os floats */
+           }
+#imagem {
+  width: 370px;
+  height: 350px;
+
 }

@@ -117,7 +117,7 @@ border-radius: 40px;
 .whatever{
 
     position: relative;
-    margin-left:1300px;
+    /*margin-left:1300px;*/
     margin-top: 80px;
     height: 277px;
     width: auto;
@@ -136,6 +136,7 @@ border-radius: 40px;
   height: 570px;
   width: 580px;
   margin-left: 100px;
+  float: right;
 }
 
 .historia-digimon h1{

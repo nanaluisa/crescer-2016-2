@@ -1,6 +1,6 @@
 console.log('Olá JS!');
 
-var elfo = {nome: 'Legolas', expperiencia:1};
+// var elfo = {nome: 'Legolas', expperiencia:1};    Movi para o outro arquivo.
 console.log('Nome:',elfo.nome);
 
 elfo.flechas = 42;
@@ -18,5 +18,7 @@ elfo.atirarflecha = function(dwarf){
 
 var dwarf = elfo.atirarflecha({vida: 110});
 
-
+exibirNaTela(elfo);
+elfo.nome = 'Legolas';
+elfo.exibirNaTela(elfo);
 console.log(elfo, dwarf);

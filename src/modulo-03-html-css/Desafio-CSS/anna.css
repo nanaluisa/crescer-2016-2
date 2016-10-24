@@ -1,0 +1,235 @@
+/*Escondendo os Pokemons tudo! */
+header span:nth-last-child(1){
+  display: none;
+}
+  .historia-pokemon{
+  display: none;
+  }
+  .personagens :nth-child(1)  {
+    display: none;
+  }
+  .personagens :nth-child(3)  {
+    display: none;
+  }
+  .treinadores-pokemon{
+    display: none;
+  }
+/*Criatividade Mode ON */
+body{
+  font-family: verdana, arial;
+  text-align: justify;
+  background-color: #FF5016;
+  margin:0 auto;
+}
+
+.logo{
+      margin: auto;
+      height: 200px;
+      width: auto;
+      background: url(http://vignette1.wikia.nocookie.net/chroniclesofillusion/images/1/14/Digimon_Logo.png/revision/latest?cb=20140620005146) no-repeat center;
+      background-size: 413px;
+      /* background-color: blue; */
+       padding: 20px;
+}
+
+header{
+  font-family: monospace;
+  color:#FF5016;
+  text-align: center;
+  /*F9A03F*/
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFCD44), to(#FF5016)) repeat-X;
+  padding: 25px;
+
+}
+header span{
+  color: blue;
+  text-transform: uppercase;
+  transition: color 2s;
+}
+    header span:hover{
+      color: #FFCD44;
+    }
+        nav a{
+            text-decoration: none;
+        }
+              nav span:not(.autenticacao){
+                /*background-color: #205E99;*/
+                font-family: fantasy;
+                color: #fff;
+                font-size: 30px;
+                margin: auto;
+                padding: 30px;
+
+              }
+
+
+.autenticacao a {
+  color: #3E6990;
+  font-size: 20px;
+  font-family: monospace;
+  text-decoration: none;
+  padding: 15px;
+  margin: 10px;
+  background-color: black;
+  border-radius: 40px;
+}
+a:hover{
+  color:#F7CE5B;
+}
+
+.autenticacao{
+  text-align: right;
+
+}
+
+
+/*
+EXEMPLOS SELECTOR NOT
+  :not(selector) { style properties }
+  ExemplosEDIT
+  p:not(.classico) { color: red; }
+  body *:not(p) { color: green; }*/
+
+/*}
+nav: nth-last-child {
+  background-color: red;*/
+
+  /*text-decoration: none;*/
+  /*text-align:center;*/
+
+  /*padding: auto;
+  font-size: 15px;
+  /*margin:auto;*/
+  /*font-style: bold;*/
+  /*background-color: black;*/
+/*height: 14px;*/
+/*border-left-wid*/
+/*color: #3E6990;
+font-size: 20px;
+font-family: monospace;
+text-decoration: none;
+padding: 15px;
+margin: 30px;
+background-color: black;
+border-radius: 40px;
+}
+*/
+.whatever{
+
+    position: relative;
+    margin-left:1300px;
+    margin-top: 80px;
+    height: 277px;
+    width: auto;
+    /*float: left;*/
+    /*display: inline-block;*/
+    /* background-size: 413px; */
+    background-color: #FF5016;
+    background: url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTgz7wYCZ4tFl4RpK__fkafVgTP1xPxmPPz7dEuB0hWQmIz9CkT) no-repeat left;
+    /* background: url(http://s2.glbimg.com/N8aBL0gexIXnsafqvJOM1NfO2Is=/695x0/s.glbimg.com/po/tt2/f/original/2015/03/20/primeiro-digimon.png) no-repeat center; */
+
+}
+
+.historia-digimon{
+  background-color: #92BC4F;
+  padding: 3px;
+  height: 570px;
+  width: 580px;
+  margin-left: 100px;
+}
+
+.historia-digimon h1{
+  color: #fff;
+  font-size: 80px;
+  text-align: center;
+  margin: 20px;
+  font-family: fantasy;
+
+}
+.historia-digimon p{
+    padding: 2px 25px;
+    font-size: larger;
+    color: #fff;
+
+
+}
+.historia-pokemon p:last-child{
+  padding-bottom: 330px;
+}
+    .historia-digimon span{
+      font-style: italic;
+    }
+    .historia-digimon a{
+      font-style: italic;
+      color: blue;
+      text-decoration: none;
+  }
+
+
+
+
+/*nav :last-child  {
+/*color: #fff;
+text-decoration: none;
+font-size: 25px;
+padding: auto;
+border: 1px solid #ddd;
+border-radius: 15px;
+color: black;
+background-color:rgba(211, 211, 211, 0.5);
+display: inline-block;
+padding: 15px;
+margin: 200px auto 0px;
+}*/
+.digiescolhidos{
+  background-color: #205E99;
+  display: inline-block;
+  padding: 20px;
+  margin: 30px 40px 10px 15px;
+}
+.personagens{
+  background-color: #E8D96A;
+  display: inline-block;
+  padding: 20px;
+  margin: 30px 40px 10px 15px;
+}
+
+ /*.menu{
+border: 1px solid #ddd;
+border-radius: 15px;
+background-color:rgba(211, 211, 211, 0.5);
+display: table;
+padding: 15px;
+margin: 250px auto 0px;
+}
+
+   .menu > .item{
+    margin:25px;
+    }
+
+          .menu >.item > a{
+                  color:#FFF;
+                  text-decoration: none;
+                  font-weight: bold;
+                }*/
+
+
+
+
+
+
+
+
+
+
+
+footer{
+    /*background-color:  #50739B;*/
+    text-align: right;
+    height: 15px;
+    font-family: monospace, helvetica;
+    padding: 10px;
+    color: #fff;
+    text-align: end;
+    font-size: medium;
+}

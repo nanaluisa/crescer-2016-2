@@ -6,12 +6,34 @@
 // divisíveis tanto por 3 quanto por 5 (e que continue imprimindo 'Diglett dig' ou 'trio trio trio' para os números divisíveis
 // apenas por 3 ou 5).
 
-function numeros(){
-  for (var i = 0; i < 101; i++) {
+function diglettDig(){
+  for (var i = 1; i <= 100; i++) {
     if (i % 3 === 0 && i % 5 === 0) {
         console.log('Diglett dig, trio trio trio');
     }
-    else if (i % 3 === 0 /*&& i !== 0*/) {
+    else if (i % 3 === 0) {
+        console.log('Diglett dig');
+    }
+    else if (i % 5 === 0 && i % 3 !== 0) {
+          console.log('trio trio trio');
+      }
+    else {
+      console.log(i);
+    }
+  }
+}
+
+// Refactory correção:   TERMINAR A CORREÇÃO
+function diglettDig(){
+  for (var i = 1; i <= 100; i++) {
+    let divisivelpor3 = i % 3 === 0;
+    let divisivelpor5 = i % 5 === 0;
+    let texto = 'olá';
+
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log('Diglett dig, trio trio trio');
+    }
+    else if (i % 3 === 0) {
         console.log('Diglett dig');
     }
     else if (i % 5 === 0 && i % 3 !== 0) {

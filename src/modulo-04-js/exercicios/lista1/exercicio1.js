@@ -17,3 +17,11 @@ function gerarPiramide(niveis) {
         console.log('R$'.repeat(i));
     }
 }
+
+
+//correção (outra forma de fazer)
+function gerarPiramide2(niveis) {
+    for (var i = 1; i <= niveis; i++) {
+        console.log(Array(i+1).join('R$'));
+    }
+}

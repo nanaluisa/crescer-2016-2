@@ -1,0 +1,75 @@
+
+
+TRATAMENTO DE ERROS:
+
+Console.WriteLine();
+
+
+// Exception Generica!
+catch(Exception ex){
+	Console.WriteLine("Ocorreu algum erro!");
+}
+
+
+Stack Trace: mensagem completa da Exception.
+
+Try -> Catch -> Finally
+
+Só não cai no finally, se houver um interrompimento externo(Finalizar Tarefa), antes de cair no finally.
+
+catch{ //genérico
+	throw; //genérico
+}
+
+
+
+
+Atalho para identeção(Ctrl + k+d)
+para renomear 
+
+
+
+
+
+using é um try-finally.
+ReadToEnd(lê do inicio ao fim) - manda todo o arquivo em uma unica string.
+ReadLine(lê linha por linha) - realocando memória a cada laço. 
+
+
+writeAllText - reescreve o arquivo
+appendAllText - escreve abaixo da ultima linha.
+
+
+
+
+
+
+.Split(';').ToFirst;
+
+
+lambda
+
+Where(frase => frase.Texto.Contains(termo))// = Filtro;
+Select //map
+
+
+-----
+
+
+order by = ordenar
+select = seleciona e adiciona, devolvendo modificado
+where = filtra por algum paramentro.
+
+propriedade da classe (atribitos):  letra 
+ maiuscula
+variavel local = minuscula;
+
+
+
+
+variavel interpolada
+return $"{Texto}; ({Autor})";
+
+
+
+

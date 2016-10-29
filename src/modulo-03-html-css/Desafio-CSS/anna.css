@@ -1,4 +1,3 @@
-/*Escondendo os Pokemons tudo! */
 header span:nth-last-child(1){
   display: none;
 }
@@ -14,7 +13,7 @@ header span:nth-last-child(1){
   .treinadores-pokemon{
     display: none;
   }
-/*Criatividade Mode ON */
+
 body{
   font-family: verdana, arial;
   text-align: justify;
@@ -28,15 +27,13 @@ body{
       width: auto;
       background: url(http://vignette1.wikia.nocookie.net/chroniclesofillusion/images/1/14/Digimon_Logo.png/revision/latest?cb=20140620005146) no-repeat center;
       background-size: 413px;
-      /* background-color: blue; */
-       padding: 20px;
+      padding: 20px;
 }
 
 header{
   font-family: monospace;
   color:#FF5016;
   text-align: center;
-  /*F9A03F*/
   background: -webkit-gradient(linear, left top, left bottom, from(#FFCD44), to(#FF5016)) repeat-X;
   padding: 25px;
 
@@ -59,9 +56,13 @@ header span{
                 font-size: 30px;
                 margin: auto;
                 padding: 30px;
-
               }
-
+              nav span:nth-child(3){
+                margin-left: 17px;
+              }
+            nav span:not(.autenticacao):hover{
+              color:rgb(5,128,187);
+            }
 
 .autenticacao a {
   color: #3E6990;
@@ -73,155 +74,121 @@ header span{
   background-color: black;
   border-radius: 40px;
 }
-a:hover{
-  color:#F7CE5B;
-}
+      a:hover{
+        color:#F7CE5B;
+      }
 
-.autenticacao{
-  text-align: right;
+      .autenticacao{
+        text-align: right;
 
-}
+      }
 
-
-/*
-EXEMPLOS SELECTOR NOT
-  :not(selector) { style properties }
-  ExemplosEDIT
-  p:not(.classico) { color: red; }
-  body *:not(p) { color: green; }*/
-
-/*}
-nav: nth-last-child {
-  background-color: red;*/
-
-  /*text-decoration: none;*/
-  /*text-align:center;*/
-
-  /*padding: auto;
-  font-size: 15px;
-  /*margin:auto;*/
-  /*font-style: bold;*/
-  /*background-color: black;*/
-/*height: 14px;*/
-/*border-left-wid*/
-/*color: #3E6990;
-font-size: 20px;
-font-family: monospace;
-text-decoration: none;
-padding: 15px;
-margin: 30px;
-background-color: black;
-border-radius: 40px;
-}
-*/
 .whatever{
-
-    position: relative;
-    /*margin-left:1300px;*/
-    margin-top: 80px;
-    height: 277px;
-    width: auto;
-    /*float: left;*/
-    /*display: inline-block;*/
-    /* background-size: 413px; */
-    background-color: #FF5016;
-    background: url(https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTgz7wYCZ4tFl4RpK__fkafVgTP1xPxmPPz7dEuB0hWQmIz9CkT) no-repeat left;
-    /* background: url(http://s2.glbimg.com/N8aBL0gexIXnsafqvJOM1NfO2Is=/695x0/s.glbimg.com/po/tt2/f/original/2015/03/20/primeiro-digimon.png) no-repeat center; */
-
+      position: absolute;
+      margin-top: 254px;
+      height: 384px;
+      width: 400px;
+      float: left;
+      margin-left: 10px;
+      background: url(http://pre02.deviantart.net/6666/th/pre/i/2014/135/2/f/taichi_adventure_by_deco_kun-d7ih9wd.png)no-repeat;
+      background-size: 280px;
 }
 
 .historia-digimon{
-  background-color: #92BC4F;
-  padding: 3px;
-  height: 570px;
-  width: 580px;
-  margin-left: 100px;
-  float: right;
+  margin-top: 85px;
+  background-color: rgb(5,128,187);
+  background: url(https://images7.alphacoders.com/701/701863.png) no-repeat;
+  background-size: 990px;
+  padding: 2px;
+  height: 553px;
+  width: 960px;
+  margin-left: 267px;
 }
 
-.historia-digimon h1{
-  color: #fff;
-  font-size: 80px;
-  text-align: center;
-  margin: 20px;
-  font-family: fantasy;
+    .historia-digimon h1{
+      margin-top: 85px;
+      color: #fff;
+      font-size: 80px;
+      text-align: center;
+      padding-right: 327px;
+      margin: 20px;
+      font-family: fantasy;
 
-}
-.historia-digimon p{
-    padding: 2px 25px;
-    font-size: larger;
-    color: #fff;
-
-
-}
-.historia-pokemon p:last-child{
-  padding-bottom: 330px;
-}
-    .historia-digimon span{
-      font-style: italic;
     }
-    .historia-digimon a{
-      font-style: italic;
-      color: blue;
-      text-decoration: none;
-  }
+    .historia-digimon p{
+      padding: 0px 35px;
+      font-size: larger;
+      color: #fff;
+      padding-right: 380px;
 
 
+    }
+          .historia-pokemon p:last-child{
+            padding-bottom: 330px;
+          }
+        .historia-digimon span{
+          font-style: italic;
+        }
+        .historia-digimon a{
+          font-style:italic;
+          font-weight: bold;
+          color: rgb(254,196,54);
+          text-decoration: none;
+      }
 
 
-/*nav :last-child  {
-/*color: #fff;
-text-decoration: none;
-font-size: 25px;
-padding: auto;
-border: 1px solid #ddd;
-border-radius: 15px;
-color: black;
-background-color:rgba(211, 211, 211, 0.5);
-display: inline-block;
-padding: 15px;
-margin: 200px auto 0px;
-}*/
 .digiescolhidos{
-  background-color: #205E99;
-  display: inline-block;
-  padding: 20px;
-  margin: 30px 40px 10px 15px;
-}
-.personagens{
-  background-color: #E8D96A;
-  display: inline-block;
-  padding: 20px;
-  margin: 30px 40px 10px 15px;
-}
-
- /*.menu{
-border: 1px solid #ddd;
-border-radius: 15px;
-background-color:rgba(211, 211, 211, 0.5);
-display: table;
-padding: 15px;
-margin: 250px auto 0px;
-}
-
-   .menu > .item{
-    margin:25px;
+  width: 354px;
+    /* padding-left: 54px; */
+    /* background: url(https://images3.alphacoders.com/695/695497.png) no-repeat; */
+    /* background: url(https://ncache.ilbe.com/files/attach/new/20150523/377678/5280279053/5868114025/30b67708d9dfc1182e096f4a39483b18.jpg)no-repeat; */
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFCD44), to(#EC9F05)) repeat-X;
+    /*rgb(254,196,54);*/
+    display: inline-block;
+    padding: 29px;
+    padding-left: 96px;
+    margin: 69px 40px 10px 93px;
+    border-radius: 20px;
+    color:#1B3E63;
     }
+  .digiescolhidos:hover{
+     transform: scale(1.2);
+   }
+        .digiescolhidos h3{
+          color: rgb(5,128,187);
+          font-size: 30px ;
+        }
+        /*.digiescolhidos li{
+          /*list-style-image: url(http://67.media.tumblr.com/avatar_0af03726267c_64.png);*/
+          /*list-style-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPoSRQQdhY-fwFuLT1-iP5Hkvl7GUntD2gAwD9ILioEXQbMriI);
+        }*/
+        .digiescolhidos li{
+          list-style-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPoSRQQdhY-fwFuLT1-iP5Hkvl7GUntD2gAwD9ILioEXQbMriI);
+        }
 
-          .menu >.item > a{
-                  color:#FFF;
-                  text-decoration: none;
-                  font-weight: bold;
-                }*/
+.personagens{
+      background: -webkit-gradient(linear, left top, left bottom, from(#FFCD44), to(#EC9F05)) repeat-X;
+      display: inline-block;
+      padding: 29px;
+      margin: 69px 40px 10px 112px;
+      border-radius: 20px;
+      height: 502px;
+      width: 305px;
+      padding-left: 80px;
+      color:rgb(255,80,22);
+}
+        .personagens h2{
+          color:#CE3300;
+        }
+        .personagens:hover{
+          /*-webkit-transform: scale(1.9);
+          -ms-transform: scale(1.9);*/
+                transform: scale(1.2);
+             }
 
-
-
-
-
-
-
-
-
+        .personagens li{
+          list-style-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAElBMVEX///8AAAD/ZjOZM2ZmZmZmMwCCkRlMAAAArUlEQVQ4jbVT0Q7EIAizIP//y0dRdy7odslFHpYNammRlXIPoDzH3wCoPiMg5wBNHEQ6IomFMDUAQCbyGrzAcC+SG83dl4DoWklQ9+OqftQP17ULeF0MMHUEbhzk5Yi97gxqVOvfHRRFVQkAzSriVZgNS6B5+QL4KCN3kaABjFlrDEg6hkhJIiebJF7bfB/UvEvLvWoy95fVrzvMs0VCXAvT2Dcuzi7tr4ATP+8HcG0CJ8M2EPsAAAAASUVORK5CYII=);
+        }
 
 
 footer{

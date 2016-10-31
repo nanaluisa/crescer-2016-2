@@ -125,7 +125,9 @@ namespace Repositorio
 
         public IList<Funcionario> AniversariantesDoMes()
         {
-            throw new NotImplementedException();
+            List<Funcionario> listaFuncionarios = Funcionarios.Where(funcionario =>
+                                  funcionario.DataNascimento.Month.Equals(DateTime.Now.Month)).ToList();
+            return listaFuncionarios;
         }
 
         public IList<dynamic> BuscaRapida()

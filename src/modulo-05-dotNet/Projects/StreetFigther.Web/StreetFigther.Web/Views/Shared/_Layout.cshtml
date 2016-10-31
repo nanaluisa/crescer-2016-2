@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link href="~/Content/estilo.css" rel="stylesheet"/>
+    <title>Street Figther MVC </title>
+
+</head>
+
+<body>
+    <div class="menu">
+        <span class="item">
+            <a href="inicio.html"> Início </a>
+        </span>
+
+        <span class="item">
+            <a href="https://www.google.com.br/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=street+fighter&safe=active&tbm=nws" target="_blank"> Notícias </a>
+        </span>
+
+        <span class="item">
+            <a href="ficha-tecnica.html"> Ficha Técnica</a>
+        </span>
+
+        <span class="item">
+            <a href="sobre.html"> Sobre</a>
+        </span>
+
+    </div>
+
+
+
+
+
+    <div class="conteudo">
+        @RenderBody()
+    </div>
+</body>
+</html>

@@ -19,9 +19,8 @@ namespace StreetFighter.Web.Controllers
         {
             var fichaT = new FichaTecnicaModel()
             {
-                Nome = "Blanka",
                 PrimeiraAparicao = "Street Fighter II The World Warrior (1991)",
-                Nascimento = new DateTime("12/02/1966"),
+                DataNascimento = Convert.ToDateTime("12/02/1966"),
                 Altura = 192,
                 Peso = 96,
                 Medidas = "B198, C120, Q172",
@@ -31,8 +30,8 @@ namespace StreetFighter.Web.Controllers
                 Desgosta = "Army ants (espécie de formiga)",
                 EstiloDeLuta = "Luta Selvagem autodidata (Army Ants) / Capoeira",
                 Origem = "Brasil (lugar de nascença é provável como sendo Tailândia)",
-                FalaDaVitoria = "Ver você em ação é uma piada!",
-                SFF2Nickname = "A selvagem criança da natureza",
+                FalaDeVitoria = "Ver você em ação é uma piada!",
+                SSF2Nickname = "A selvagem criança da natureza",
                 SFA3Nickname = "A animal pessoa amazônica",
                 SF4Nickname = "Guerreiro da selva",
                 SFA3Stage = "Ramificação do Rio Madeira - pantano, Brasil (ramificação do rio Madeira: talvez possa ser Mato Grosso, ou Tocantins?)",

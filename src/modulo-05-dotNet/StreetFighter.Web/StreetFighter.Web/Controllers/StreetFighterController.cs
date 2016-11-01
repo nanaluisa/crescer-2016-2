@@ -14,9 +14,10 @@ namespace StreetFighter.Web.Controllers
             return View();
         }
 
+
         public ActionResult FichaTecnica()
         {
-            var blanka = new FichaTecnicaModel()
+            var fichaT = new FichaTecnicaModel()
             {
                 Nome = "Blanka",
                 PrimeiraAparicao = "Street Fighter II The World Warrior (1991)",
@@ -38,35 +39,18 @@ namespace StreetFighter.Web.Controllers
                 SF2Stage = "Bacia do rio Amazonas (Brasil)",
                 GolpesEspeciaisFamosos = "Electric Thunder, Rolling Attack"
             };
-            return View(blanka);
+
+            return View(fichaT);
         }
 
         public ActionResult Sobre()
         {
-            var sobre = new SobreModel()
-            {
-                NomeCompleto = "Anna Luísa de Oliveira da Silva",
-                DataNascimento = DateTime.(1997,03,17),
-                Altura = 153,
-                Filiacao = "Luís Fernando e Adelaide da Silva",
-                PaisDeOrigem = "Brasil",
-                CidadeNatal = "Sapiranga / RS",
-                AreaDeFormacao = "Tecnologia da Informação",
-                Universidade = "Unisinos",
-                Habilidades = "Comunicativa, criativa, amigável",
-                Gosta = "Comida caseira de minha mãe",
-                Desgosta = "Pão de queijo e marshmallow",
-                BebidaPredileta = "Chimarrão",
-                Frase = "'Live each day with a thankful heart'",
-                FalaDeVitoria = "'Turn down for what?' B)  hahaha",
-                Nickname = "'Anninha'",
-                Mentor = "Jesus Cristo",
-                Hobbies = "Escutar música, ler",
-                BandasFavoritas = "Casting Crowns, Third Day, Jeremy Camp, Planetshakers, MercyMe, Newsboys...",
-                ObjetivoDestaPage = "Pôr em prática o aprendizado que estou recebendo no Módulo 5, atrávez do treinamento realizado pelos proficionais da CWI Software."
-            };
-            return View(sobre);
+             
         }
 
-    }//class
-}//namespace
+
+
+
+
+    }//Controller
+}//class StreetFighterController

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace StreetFigther.Web.Models  
+namespace StreetFighter.Web.Models
 {
     public class FichaTecnicaModel
     {
@@ -25,6 +25,5 @@ namespace StreetFigther.Web.Models
         public string SFA3Stage { get; set; }
         public string SF2Stage { get; set; }
         public string GolpesEspeciaisFamosos { get; set; }
-
     }
 }

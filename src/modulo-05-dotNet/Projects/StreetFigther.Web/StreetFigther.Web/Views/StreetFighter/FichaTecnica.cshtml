@@ -2,6 +2,9 @@
 @{
     ViewBag.Title = "FichaTecnica";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    @model StreetFighter.Web.Models.FichaTecnicaModel
+
+
 }
 
 
@@ -22,7 +25,7 @@
 
                     <td>
                         <p>
-                            <strong>Primeira aparição:</strong> Street Fighter II The World Warrior (1991) </br>
+                            <strong>Primeira aparição:</strong> @Model.PrimeiraAparicao </br>
                             <strong>Nascimento:</strong> 12 de fevereiro de 1966.</br>
                             <strong>Altura:</strong> 192cm. <br>
                             <strong>Peso:</strong> 96kg. <br>

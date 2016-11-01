@@ -1,17 +1,16 @@
 ﻿
+@model StreetFighter.Web.Models.SobreModel
 @{
     ViewBag.Title = "Sobre";
     Layout = "~/Views/Shared/_Layout.cshtml";
+   
 }
+
 
 <div class="titulo">
     <h1>Sobre</h1>
 
 </div>
-
-
-<div class="corpo">
-
 
     <h1 id="sobre">Anna Silva</h1>
 
@@ -23,28 +22,26 @@
             </td>
 
             <td>
-                <p>
-                    <strong>Nome Completo:</strong> Anna Luísa de Oliveira da Silva </br>
-                    <strong>Nascimento:</strong> 17 de março de 1997.</br>
-                    <strong>Altura:</strong> 153cm. <br>
-                    <strong>Filiação:</strong> Luís Fernando e Adelaide da Silva.  <br>
-                    <strong>País de Origem:</strong> Brasil. <br>
-                    <strong>Cidade Natal:</strong> Sapiranga / RS. <br>
-                    <strong>Área de Formação:</strong> Tecnologia da Informação. <br>
-                    <strong>Universidade:</strong> Unisinos. <br>
-                    <strong>Habilidades especiais:</strong> Comunicativa, criativa, amigável. <br>
-                    <strong>Gosta:</strong> Comida caseira de minha mãe. <br>
-                    <strong>Desgosta:</strong> Pão de queijo e marshmallow. <br>
-                    <strong>Bebida Predileta:</strong> Chimarrão e Suco de Laranja, não os dois de uma vez, se não dá Jabulani!<br>
-                    <strong>Frase:</strong> "Live each day with a thankful heart". <br>
-                    <strong>Uma fala de vitória:</strong> "Turn down for what?" B)  hahaha'<br>
-                    <strong>Nickname:</strong> "Anninha". <br>
-                    <strong>Mentor:</strong> Jesus Cristo. <br>
-                    <strong>Hobbies:</strong> Escutar música, ler. <br>
-                    <strong>Bandas Favoritas:</strong> Casting Crowns, Third Day, Jeremy Camp, Planetshakers, MercyMe, Newsboys... <br>
-                    <strong>Objetivo desta Page:</strong> Pôr em prática o aprendizado que estou recebendo no Módulo 3, atrávez do treinamento
-                    do Projeto Crescer realizado pelos proficionais da CWI Software. <br>
-                </p>
+                <p> <strong>Nome Completo:</strong> @Model.NomeCompleto</p>
+                <p> <strong>Nascimento:</strong>@Model.DataNascimento</p>
+                <p> <strong>Altura:</strong>@Model.Altura </p>
+                <p> <strong>Filiação:</strong> Luís Fernando e Adelaide da Silva.  </p>
+                <p> <strong>País de Origem:</strong> Brasil. </p>
+                <p> <strong>Cidade Natal:</strong> Sapiranga / RS. </p>
+                <p> <strong>Área de Formação:</strong> Tecnologia da Informação. </p>
+                <p> <strong>Universidade:</strong> Unisinos. </p>
+                <p> <strong>Habilidades especiais:</strong> Comunicativa, criativa, amigável. </p>
+                <p> <strong>Gosta:</strong> Comida caseira de minha mãe. </p>
+                <p> <strong>Desgosta:</strong> Pão de queijo e marshmallow. </p>
+                <p> <strong>Bebida Predileta:</strong> Chimarrão e Suco de Laranja, não os dois de uma vez, se não dá Jabulani!</p>
+                <p> <strong>Frase:</strong> "Live each day with a thankful heart". </p>
+                <p> <strong>Uma fala de vitória:</strong> "Turn down for what?" B)  hahaha'</p>
+                <p> <strong>Nickname:</strong> "Anninha". </p>
+                <p> <strong>Mentor:</strong> Jesus Cristo. </p>
+                <p> <strong>Hobbies:</strong> Escutar música, ler. </p>
+                <p> <strong>Bandas Favoritas:</strong> Casting Crowns, Third Day, Jeremy Camp, Planetshakers, MercyMe, Newsboys... </p>
+                <p> <strong>Objetivo desta Page:</strong> Pôr em prática o aprendizado que estou recebendo no Módulo 3, atrávez do treinamentoealizado pelos proficionais da CWI Software. </p>
+                
             </td>
         </tr>
 

@@ -93,6 +93,7 @@
     <Content Include="Content\estilo.css" />
     <Content Include="Content\Images\blanka.png" />
     <Content Include="Content\Images\fundo.jpg" />
+    <Content Include="Content\Images\girl-in-tech.jpg" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>

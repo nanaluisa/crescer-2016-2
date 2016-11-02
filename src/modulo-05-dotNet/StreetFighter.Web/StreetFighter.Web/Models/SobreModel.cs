@@ -25,6 +25,6 @@ namespace StreetFighter.Web.Models
         public string Mentor { get; set; }
         public string Hobbies { get; set; }
         public string BandasFavoritas { get; set; }
-        public string ObjetivoDestaPage { get; set; }
+        public string ObjetivoDaPage { get; set; }
     }
 }

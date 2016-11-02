@@ -114,6 +114,8 @@
     <Content Include="Views\StreetFighter\Index.cshtml" />
     <Content Include="Views\StreetFighter\Sobre.cshtml" />
     <Content Include="Views\StreetFighter\FichaTecnica.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\StreetFighter\Cadastro.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

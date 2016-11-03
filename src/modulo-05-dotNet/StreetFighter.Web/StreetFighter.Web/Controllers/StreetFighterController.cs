@@ -15,31 +15,27 @@ namespace StreetFighter.Web.Controllers
         }
 
 
-        public ActionResult FichaTecnica()
+        public ActionResult Cadastro()
         {
-            var fichaT = new FichaTecnicaModel()
-            {
-                PrimeiraAparicao = "Street Fighter II The World Warrior (1991)",
-                DataNascimento = Convert.ToDateTime("12/02/1966"),
-                Altura = 192,
-                Peso = 96,
-                Medidas = "B198, C120, Q172",
-                TipoSanguineo = "B",
-                HabilidadesEspeciais = "Caçar, Eletricidade",
-                Gosta = "Frutas tropicais, Pirarucu, Sua mãe",
-                Desgosta = "Army ants (espécie de formiga)",
-                EstiloDeLuta = "Luta Selvagem autodidata (Army Ants) / Capoeira",
-                Origem = "Brasil (lugar de nascença é provável como sendo Tailândia)",
-                FalaDeVitoria = "Ver você em ação é uma piada!",
-                SSF2Nickname = "A selvagem criança da natureza",
-                SFA3Nickname = "A animal pessoa amazônica",
-                SF4Nickname = "Guerreiro da selva",
-                SFA3Stage = "Ramificação do Rio Madeira - pantano, Brasil (ramificação do rio Madeira: talvez possa ser Mato Grosso, ou Tocantins?)",
-                SF2Stage = "Bacia do rio Amazonas (Brasil)",
-                GolpesEspeciaisFamosos = "Electric Thunder, Rolling Attack"
-            };
+            ListagemOrigem();
+            return View();
 
-            return View(fichaT);
+        }
+
+        public ActionResult Salvar(CadastroModel model)
+        {
+            ListagemOrigem();
+
+            if (ModelState.IsValid)
+            {
+                ViewBag.Mensagem = "Cadastro concluído com sucesso.";
+                return View("Detalhe", model);
+            }
+            else
+            {
+                ModelState.AddModelError("", "Ocorreu algum erro! Verifique suas respostas!");
+                return View("Cadastro");
+            }
         }
 
         public ActionResult Sobre()
@@ -69,11 +65,26 @@ namespace StreetFighter.Web.Controllers
 
             return View(sobre);
         }
-        
+
+
+       
+
+        private void ListagemOrigem()
+        {
+            //ViewBag.ListaPersonagens
+            ViewData["Origem"] = new List<SelectListItem>()
+            {
+                new SelectListItem() { Value = "BR", Text = "Brasil" },
+                new SelectListItem() { Value = "AR", Text = "Argentina" },
+                new SelectListItem() { Value = "JP", Text = "Japão" },
+                new SelectListItem() { Value = "US", Text = "Estados Unidos" }
+                
+            };
+        }
+    }
+}
 
 
 
-
-
-    }//Controller
-}//class StreetFighterController
+    //Controller
+//class StreetFighterController

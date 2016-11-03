@@ -26,7 +26,7 @@ namespace StreetFighter.Web.Models
         public decimal Peso { get; set; }
 
         [Required]
-        public int Origem { get; set; }
+        public string Origem { get; set; }
 
         [DisplayName("Golpes Especiais")]
         [Required]

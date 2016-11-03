@@ -1,17 +1,42 @@
-﻿@model StreetFighter.Web.Models.FichaTecnicaModel
+﻿@model  StreetFighter.Web.Models.CadastroModel
 @{
     ViewBag.Title = "FichaTecnica";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
        <div class="corpo">
-    <h1 id="ficha-tecnica">Blanka</h1>
+    <!----<h1 id="ficha-tecnica"></h1>-->
     <table>
         <tr>
             <td>
-                <img src="~/Content/Images/blanka.png" alt="Imagem-Blanka" />
+                <img src="@Model.Imagem" alt="Imagem-Personagem-Cadastrado">
             </td>
             <td>
+
+                <h2>@(Model.Nome)</h2>
+
+                <img id="personagem" src="@Model.Imagem" alt="auto">
+
+                <p><strong>Data de Nascimento:</strong> @(String.Format("{0} de {1} de {2}.", Model.DataNascimento.Day, Model.DataNascimento.ToString("MMMM", new CultureInfo("pt-BR")), Model.DataNascimento.Year))</p>
+                <p><strong>Altura:</strong> @(Model.Altura) cm.</p>
+                <p><strong>Peso:</strong> @(Model.Peso) kg.</p>
+                <p><strong>Origem:</strong> @(Model.Origem).</p>
+                <p><strong>Golpes Especiais Famosos:</strong> @(Model.GolpesEspeciais).</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                @*
+
 
                 <p>
                     <strong>Primeira aparição:</strong> @Model.PrimeiraAparicao </br>
@@ -34,6 +59,7 @@
                     <strong>Golpes especiais famosos:</strong>@Model.GolpesEspeciaisFamosos</br>
 
                 </p>
+                *@
             </td>
         </tr>
 

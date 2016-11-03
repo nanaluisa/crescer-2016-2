@@ -40,18 +40,26 @@ namespace StreetFighter.Web.Controllers
 
         }
 
-        public ActionResult Salvar(CadastroModel model)
+
+        public ActionResult Listagem()
+        {
+            return View();
+        }
+
+
+        public ActionResult Salvar(FichaTecnicaModel model)
         {
             ListagemOrigem();
 
             if (ModelState.IsValid)
-            {   ViewBag.Mensagem = "Cadastro concluído com sucesso.";
+            {
+                ViewBag.Mensagem = "Cadastro concluído com sucesso.";
                 return View("FichaTecnica", model);
             }
             else
             {
                 ModelState.AddModelError("", "Ocorreu algum erro! Verifique suas respostas!");
-                return View("Cadastro");
+                return View("CadastroModel");
             }
         }
 
@@ -97,6 +105,7 @@ namespace StreetFighter.Web.Controllers
                 new SelectListItem() { Value = "BR", Text = "Brasil" },
                 new SelectListItem() { Value = "AR", Text = "Argentina" },
                 new SelectListItem() { Value = "JP", Text = "Japão" },
+                new SelectListItem() { Value = "MP", Text = "Morro da Pedra" },
                 new SelectListItem() { Value = "US", Text = "Estados Unidos" }
                 
             };

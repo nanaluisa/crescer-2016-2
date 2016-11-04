@@ -1,31 +1,14 @@
-﻿@model StreetFighter.Web.Models.CadastroModel
+﻿@model StreetFighter.Web.Models.FichaTecnicaModel
 @{
     ViewBag.Title = "Cadastro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Cadastro de Personagem</h2>
 
-<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>Cadastro Personagem</title>
-    <link href="~/Content/bootstrap.css" rel="stylesheet" />
-    <style>
-        .field-validation-error {
-            color: #a94442;
-        }
-    </style>
-</head>
-<body>
-
-    <hr />
-
-    @*Se estiver vazia, não é preenchido*@
+   
     <h3>@ViewBag.Mensagem</h3>
 
-    @using (Html.BeginForm("Salvar", "StreetFigther", FormMethod.Post, new { @class = "form-horizontal" }))
+    @using (Html.BeginForm("Salvar", "StreetFighter", FormMethod.Post, new { @class = "form-horizontal" }))
     {
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
 

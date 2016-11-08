@@ -15,11 +15,13 @@ namespace StreetFighter.Repositoio_EF
 
         }
 
-        public DbSet<Personagem> Personagem { get; set; }
+        //public DbSet<Personagem> Personagem { get; set; }
 
 
+        
         //public DbSet<UserRole> UserRole { get; set; }
 
+       //reescrevendo para não pluralizar os nomes das tabelas.
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

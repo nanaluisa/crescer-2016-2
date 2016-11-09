@@ -12,7 +12,9 @@ namespace Loja.Infraestrutura
     {
         public string Criptografar(string texto)
         {
-            return ConverterParaMD5(texto);
+            string textoCriptografado = $"{texto}_HelloWorld!";
+
+            return ConverterParaMD5(textoCriptografado);
         }
 
         private string ConverterParaMD5(string texto)

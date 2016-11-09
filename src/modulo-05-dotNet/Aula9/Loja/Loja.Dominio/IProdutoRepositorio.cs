@@ -8,7 +8,9 @@ namespace Loja.Dominio
 {
     public interface IProdutoRepositorio
     {
-        Produto BuscarPorNome(string nome);
+        void CadastrarProduto(Produto produto);
+        void EditarProduto(Produto produto);
+        //Buscar
     }
 
 }

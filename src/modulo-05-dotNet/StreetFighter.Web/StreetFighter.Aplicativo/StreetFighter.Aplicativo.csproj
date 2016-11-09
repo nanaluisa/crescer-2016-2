@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F32650FF-409F-493F-8377-6D8B68C5AE90}</ProjectGuid>
+    <ProjectGuid>{9EACCC50-07C6-4587-8765-92F0C040E6F3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StreetFighter.Aplicativo</RootNamespace>
@@ -40,13 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IPersonagem.cs" />
-    <Compile Include="PersonagemAplicativo.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StreetFighter.Dominio\StreetFighter.Dominio.csproj">
+<<<<<<< HEAD
       <Project>{cafa810b-5134-482b-b7a3-f17086ce3532}</Project>
+=======
+      <Project>{67f8e048-8077-4a0f-8daf-6c410d9850e0}</Project>
+>>>>>>> master
       <Name>StreetFighter.Dominio</Name>
     </ProjectReference>
     <ProjectReference Include="..\StreetFighter.Repositoio_EF\StreetFighter.Repositoio_EF.csproj">

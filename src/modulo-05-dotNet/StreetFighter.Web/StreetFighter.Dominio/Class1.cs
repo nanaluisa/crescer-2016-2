@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace StreetFighter.Aplicativo
+namespace StreetFighter.Dominio
 {
-    class IPersonagem
+    public class Class1
     {
     }
 }

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F32650FF-409F-493F-8377-6D8B68C5AE90}</ProjectGuid>
+    <ProjectGuid>{9EACCC50-07C6-4587-8765-92F0C040E6F3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>StreetFighter.Aplicativo</RootNamespace>
@@ -40,9 +40,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IPersonagem.cs" />
-    <Compile Include="PersonagemAplicativo.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StreetFighter.Dominio\StreetFighter.Dominio.csproj">
+      <Project>{67f8e048-8077-4a0f-8daf-6c410d9850e0}</Project>
+      <Name>StreetFighter.Dominio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StreetFighter.Repositoio_EF\StreetFighter.Repositoio_EF.csproj">
+      <Project>{68ed910d-186a-4238-b5e3-c9c6976837bd}</Project>
+      <Name>StreetFighter.Repositoio_EF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StreetFighter.Repositorio\StreetFighter.Repositorio.csproj">
+      <Project>{c3fc5749-91fa-4f52-9247-be67c97fb8cc}</Project>
+      <Name>StreetFighter.Repositorio</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

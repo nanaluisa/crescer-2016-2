@@ -1,0 +1,35 @@
+os pacotes que instalei em aula hoje foram:
+
+->  Install-Package Bootstrap
+ 
+->  Install-Package Microsoft.jQuery.Unobtrusive.Validation      //Esse daqui já instala o Jquery.Validation
+
+
+Exercício ASP.NET MVC
+
+1. Tela de Cadastro
+
+Substituir no menu o link de "Notícias" por "Cadastro"
+
+Ao ser clicado deve abrir uma tela contendo, além do botão de salvar, os seguintes campos:
+
+Imagem (TextBox, string)
+Nome (TextBox, string)
+Nascimento (TextBox, string)
+Altura (TextBox, int)
+Peso (TextBox, decimal)
+Origem (DropdownListFor, string) [Exemplos de opções: Brasil (id "BR"), Argentina (id "AR"), Japão (id "JP")]
+Golpes especiais (TextBox, string)
+Personagem Oculto (CheckboxFor, bool)
+Ao clicar em "Salvar" deve retornar a view de FichaTecnica populada com esses dados (com o mesmo layout que estava antes), respeitado o formato em particular para os seguintes campos:
+		
+---- FORMATAÇÃO ----
+Nascimento: 12 de fevereiro de 1966
+Altura: 192 cm
+Peso: 96 kg
+Origem: BR
+
+
+
+2. Link do menu "Ficha Técnica"
+Deve continuar retornando a view de FichaTecnica populadando automaticamente os dados do Blanka (altere a model que vocês já fizeram para conter apenas os campos informados acima).

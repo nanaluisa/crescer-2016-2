@@ -11,8 +11,24 @@ class TelaPrincipal {
 
   renderizarEstadoInicial() {
     $('.tela-centralizada').removeClass('tela-centralizada');
-    this.$elem.show();  
+    this.$elem.show();
+
+    $.get('/api/herois')
+      .done((res) => {
+        marvelflix.render('.tela', 'tela-principal', {
+          chars: res.map(function (item) {
+            return {
+              id: item.id,
+              name: item.nome,
+              thumbnail: item.urlThumbnail
+            }
+          })
+        });
+      });
+    
+    console.log('renderizar com dados estáticos');
    
+<<<<<<< HEAD
     $.get('/api/herois')
        .done((res) => {
            marvelflix.render('.tela', 'tela-principal', {
@@ -30,6 +46,9 @@ class TelaPrincipal {
 
 
    
+=======
+    
+>>>>>>> master
 
   }
 

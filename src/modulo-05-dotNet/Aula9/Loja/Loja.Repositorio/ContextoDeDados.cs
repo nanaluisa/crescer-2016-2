@@ -19,6 +19,7 @@ namespace Loja.Repositorio
         public DbSet<Usuario> Usuario { get; set; }
         public DbSet<Produto> Produto { get; set; }
 
+        //"receita de bolo": Retirando pluralização automática de tabelas. 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

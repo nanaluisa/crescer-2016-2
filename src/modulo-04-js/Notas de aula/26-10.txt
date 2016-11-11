@@ -1,0 +1,73 @@
+forEach(function(elemento,indice){console.log(elemento)}) //sintaxe antiga
+
+ 
+
+
+
+for of
+//sintaxe nova
+ arr.find(elem => elem === "ooi")
+//sintaxe antiga:
+arr.find (function (elem) {return elem ==="oi";});   //find só retorna o primeiro
+
+
+
+
+//array filter
+ arr.filter(elem => elem.nome === 'A') // retorna todos os que tem esse filtro.
+
+
+---------------------------
+//operação de redução a apenas 1.
+//pega o conj. de entrada e acumula somando e reduzindo a um dado só. 
+[1,2,3].reduce(function(ac, elem){return ac + elem})
+//acumulador ac e o valor atual do elemento
+
+[1,2,3].reduce((ac,elem) => ac + elem) // reduzindo a sintaxe.
+
+
+---exemplo do exercicio
+
+
+
+
+
+dadosHerois.reduce((ac,herois) => ac + heroi.comics.avilable)
+//neste caso como são arrays complexos, preciso informar o valor inicial da iteração.
+dadosHerois.reduce((ac,herois) => ac + heroi.comics.avilable,0)
+
+//media
+dadosHerois.reduce((ac,herois) => ac + heroi.comics.avilable,0)/dados.herois.length
+-----
+//somente os numeros do comics
+//like select do BD, projeção! Quero somente alguns.
+dadosHerois.map(heroi => heroi.comics.available)// map reduce (selecionar somente o que eu quero!) map versão nova
+//reduce
+dadosHerois.map(heroi => heroi.comics.available).reduce((ac,qtd) => ac +qtd)
+
+
+
+Find  - encontrar apenas o primeiro(apenas 1)..
+Map  - mapear. entrada -> uma função.
+filter - selecionar apenas os campos desejados do array.
+Reduce  - reduzir conjunto de dados em apenas um elemento. com uma função.
+
+dadosHerois.map(function())
+
+
+
+
+
+
+
+
+
+
+
+marvel.sort((heroi1, heroi2) => heroi2.comics.available -heroi1.comics.available)
+
+------ Sort no JS
+arr.sort((elem1, elem2) => elem1.qtd - elem2.qtd) //crescente
+arr.sort((elem1, elem2) => elem2.qtd - elem1.qtd) //decrescente
+arr.sort((elem1, elem2) => elem1.qtd - elem2.qtd)[0] // pegando a posição 0 que será o maior.
+

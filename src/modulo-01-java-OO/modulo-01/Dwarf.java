@@ -6,20 +6,18 @@ public class Dwarf extends Personagem {
 
     // java type initializer
     // vai ser replicado para cada construtor
-    {
-        vida = 110;
-        //status = Status.VIVO;
-    }
-
     public Dwarf() {
         this(null, new DataTerceiraEra(1,1,1));
+        status = Status.VIVO;
+        vida = 110;
     }
 
     public Dwarf(String nome, DataTerceiraEra dataNascimento) {
         super(nome);
         this.dataNascimento = dataNascimento;
+        vida = 110;
     }
-
+    
     public void perderVida() {
         boolean estaMorto = status.equals(Status.MORTO);
         // sai do método

@@ -1,0 +1,13 @@
+--copiando a table
+select * into CidadeAux from Cidade;
+
+--limpando a table
+truncate table CidadeAux;
+-- inserindo dados em uma table a partir de um select
+insert into CidadeAux(IDCidade,Nome, UF)
+	Select IDCidade, Nome,UF
+	from Cidade;
+
+
+select * from CidadeAux;
+

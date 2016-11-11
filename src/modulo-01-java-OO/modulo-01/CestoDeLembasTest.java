@@ -45,15 +45,3 @@ public class CestoDeLembasTest
         assertFalse(cesto.podeDividirEmPares());
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

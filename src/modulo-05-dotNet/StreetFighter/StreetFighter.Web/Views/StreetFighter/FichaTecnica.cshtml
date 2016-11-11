@@ -1,0 +1,30 @@
+﻿@model  StreetFighter.Web.Models.FichaTecnicaModel
+@{
+    ViewBag.Title = "Ficha Tecnica";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+       <div class="corpo">
+     <table>
+        <tr>
+            <td>
+                <img src="@Model.Imagem" alt="Imagem-Personagem-Cadastrado">
+            </td>
+            <td>
+
+                <h2>@(Model.Nome)</h2>
+
+                <p><strong>Data de Nascimento:</strong> @(Model.DataNascimento.ToShortDateString())</p>
+                <p><strong>Altura:</strong> @(Model.Altura) cm.</p>
+                <p><strong>Peso:</strong> @(Model.Peso) kg.</p>
+                <p><strong>Origem:</strong> @(Model.Origem).</p>
+                <p><strong>Golpes Especiais Famosos:</strong> @(Model.GolpesEspeciais).</p>
+
+            </td>
+        </tr>
+
+    </table>
+
+</div>
+
+

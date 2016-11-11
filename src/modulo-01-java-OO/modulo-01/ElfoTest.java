@@ -19,7 +19,7 @@ public class ElfoTest {
         // Assert
         assertEquals(nomeEsperado, elfoDoTeste.getNome());
     }
-
+    
     @Test
     public void elfoNasceCom100DeVida() {
         assertEquals(100, new Elfo("Legolas").getVida(), 0.);
@@ -48,7 +48,8 @@ public class ElfoTest {
         // Arrange
         Elfo legolas = new Elfo("Elfo");
         // Act
-        legolas.atirarFlecha(new Dwarf());
+        DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
         // Assert
         assertEquals(41, legolas.getFlecha().getQuantidade());
         assertEquals(1, legolas.getExperiencia());
@@ -59,8 +60,9 @@ public class ElfoTest {
         // Arrange
         Elfo legolas = new Elfo("Elfo");
         // Act
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
+        DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf2",data));
         // Assert
         assertEquals(40, legolas.getFlecha().getQuantidade());
         assertEquals(2, legolas.getExperiencia());
@@ -80,48 +82,50 @@ public class ElfoTest {
         // Arrange
         Elfo legolas = new Elfo("Elfo");
         // Act
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
+        DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
+        
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
         // Assert
         assertEquals(0, legolas.getFlecha().getQuantidade());
         assertEquals(42, legolas.getExperiencia());
@@ -131,50 +135,53 @@ public class ElfoTest {
     public void elfoAtira43Flechas() {
         // Arrange
         Elfo legolas = new Elfo("Elfo");
+        
+        DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
+        
         // Act
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
         // Assert
         assertEquals(0, legolas.getFlecha().getQuantidade());
         assertEquals(42, legolas.getExperiencia());
@@ -183,7 +190,8 @@ public class ElfoTest {
     @Test
     public void elfoAtiraFlechaEmUmDwarf() {
         Elfo elfo = new Elfo("Batman");
-        Dwarf balin = new Dwarf();
+        DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
+        Dwarf balin = new Dwarf("Dwarf",data);
         elfo.atirarFlecha(balin);
         assertEquals(100, balin.getVida(), 0.);
     }
@@ -191,7 +199,8 @@ public class ElfoTest {
     @Test
     public void elfoAtiraDuasFlechaEmUmDwarf() {
         Elfo elfo = new Elfo("Batman");
-        Dwarf balin = new Dwarf();
+        DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
+        Dwarf balin = new Dwarf("Dwarf",data);
         elfo.atirarFlecha(balin);
         elfo.atirarFlecha(balin);
         assertEquals(90, balin.getVida(), 0.);
@@ -200,12 +209,13 @@ public class ElfoTest {
     @Test
     public void elfoAtiraUmaFlechaEmCadaDwarf() {
         Elfo elfo = new Elfo("Batman");
-        Dwarf balin = new Dwarf();
-        Dwarf gloin = new Dwarf();
+        DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
+        Dwarf balin = new Dwarf("Dwarf",data);
+        Dwarf gloin = new Dwarf("Dwarf",data);
         elfo.atirarFlecha(balin);
         elfo.atirarFlecha(gloin);
-        assertEquals(100, balin.getVida(), 0.);
-        assertEquals(100, gloin.getVida(), 0.);
+        assertEquals(100., balin.getVida(), 0.);
+        assertEquals(100., gloin.getVida(), 0.);
     }
 
     @Test
@@ -219,7 +229,8 @@ public class ElfoTest {
     @Test
     public void elfoAtiraFlechaEToString() {
         Elfo legolas = new Elfo("Legolas");
-        legolas.atirarFlecha(new Dwarf());
+        DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
         assertEquals("Legolas possui 41 flechas e 1 nível de experiência.",
             legolas.toString());
 
@@ -228,8 +239,9 @@ public class ElfoTest {
     @Test
     public void elfoAtiraDuasFlechasEToString() {
         Elfo legolas = new Elfo("Legolas");
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
+        DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
         assertEquals("Legolas possui 40 flechas e 2 níveis de experiência.",
             legolas.toString());
 
@@ -238,47 +250,48 @@ public class ElfoTest {
     @Test
     public void elfoAtira41FlechasEToString() {
         Elfo legolas = new Elfo("Legolas");
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
-        legolas.atirarFlecha(new Dwarf());
+        DataTerceiraEra data = new DataTerceiraEra(12,03,5000);
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
+        legolas.atirarFlecha(new Dwarf("Dwarf",data));
         assertEquals("Legolas possui 1 flecha e 41 níveis de experiência.",
             legolas.toString());
     }

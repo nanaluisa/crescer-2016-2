@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F7939D6F-B58D-ADBF-B862-28259FE7E79C" name="Partido">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:27:22 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDPartido" id="C8EBB7C4-629C-9E80-CBE5-806F35049AFD">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:29:32 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="AC48BB9C-AB4D-3E0E-28AF-D499DE1E0616">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:29:32 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Sigla" id="0ED86C18-302B-DF67-97A9-6821F4086CB0">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:29:32 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>5</dataTypeSize>
+<ownDataTypeParameters>5,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0B6F5E08-8BB3-93E8-97B7-1F67B8592684" name="Partido_PK">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:29:32 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C8EBB7C4-629C-9E80-CBE5-806F35049AFD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

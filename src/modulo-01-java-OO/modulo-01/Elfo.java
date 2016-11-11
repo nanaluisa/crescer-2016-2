@@ -14,6 +14,12 @@ public class Elfo extends Personagem {
         Elfo.contadorDeElfos++;
     }
     
+    protected void inicializarInventario(int quantidadeFlechas) {
+        this.inventario.adicionarItem(new Item("Arco", 1));
+        this.inventario.adicionarItem(new Item("Flechas", quantidadeFlechas >= 0 ? quantidadeFlechas : 42));
+    }
+
+    
     // ~Elfo() { }
     // https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html#finalize()
     protected void finalize() throws Throwable {
@@ -44,23 +50,25 @@ public class Elfo extends Personagem {
             getFlecha().setQuantidade(quantidadeFlechas - 1);
             experiencia += 1 * fatorExperiencia;
             dwarf.perderVida();
-        }
-    }
-
-    protected void inicializarInventario(int quantidadeFlechas) {
-        this.inventario.adicionarItem(new Item("Arco", 1));
-        this.inventario.adicionarItem(new Item("Flechas", quantidadeFlechas >= 0 ? quantidadeFlechas : 42));
-    }
-
+          }
+      }
+          /*public void atirarFlechaRefactory(){
+          //atirarFlecha();
+          experiencia++;
+          flecha.setQuantidade(flecha.getQuantidade()-1);
+         }*/
+     
+   
     public String toString() {
         //return "<nome> possui <flechas> flechas e <exp> níveis de experiência.";
-
-        int quantidadeFlechas = this.getFlecha().getQuantidade();
-        boolean flechaNoSingular = quantidadeFlechas == 1;
         boolean experienciaNoSingular = this.experiencia == 0 || this.experiencia == 1;
-
+        int quantidadeFlechas = this.getFlecha().getQuantidade(); 
+        //boolean flechaNoSingular = this.flecha.getQuantidade() == 1;
+        boolean flechaNoSingular = quantidadeFlechas == 1; 
+        
         return String.format("%s possui %d %s e %d %s de experiência.",
             this.nome,
+            //this.flecha.getQuantidade(),
             quantidadeFlechas,
             // ?:
             flechaNoSingular ? "flecha" : "flechas",
@@ -68,10 +76,12 @@ public class Elfo extends Personagem {
             experienciaNoSingular ? "nível" : "níveis"
         );
     }
+   
+    /*
+     * public void atirarFlechaRefactory(){
+      experiencia++;
+      flecha.setQuantidade(flecha.getQuantidade()-1);
+    }
+    */
 
-    /*public void atirarFlechaRefactory() {
-    experiencia++;
-    flecha.setQuantidade(flecha.getQuantidade()-1);
-    }*/
 }
-

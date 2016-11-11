@@ -1,5 +1,4 @@
-public class CestoDeLembas
-{
+public class CestoDeLembas{
     private int numeroPaes;
     
     public CestoDeLembas(int numeroPaes) {
@@ -9,4 +8,6 @@ public class CestoDeLembas
     public boolean podeDividirEmPares() {
         return numeroPaes > 2 && numeroPaes % 2 == 0 && numeroPaes <= 100;
     }
+
 }
+ 

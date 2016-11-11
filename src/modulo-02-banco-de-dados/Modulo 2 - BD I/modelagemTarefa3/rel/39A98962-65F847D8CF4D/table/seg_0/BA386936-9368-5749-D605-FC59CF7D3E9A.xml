@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="BA386936-9368-5749-D605-FC59CF7D3E9A" name="UF">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:32:36 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDUf" id="E9C644D3-2F9B-980F-E46B-BB67096F707F">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:33:28 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="07ECD9D9-2D0F-2635-8A78-163EC33E21DD">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:33:28 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Sigla" id="439F0BD4-D44A-1F08-1F44-E552CFCB5937">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:33:28 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>2</dataTypeSize>
+<ownDataTypeParameters>2,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0EC6DF3E-D166-453B-3753-5102B860CA29" name="UF_PK">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:33:50 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E9C644D3-2F9B-980F-E46B-BB67096F707F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

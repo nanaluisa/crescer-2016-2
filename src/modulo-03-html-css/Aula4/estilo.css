@@ -1,0 +1,59 @@
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 1800px;
+    height: 100px;
+    background: red;
+}
+
+.footer {
+    position: fixed;
+    top: 570px;
+    left: 0px;
+    width: 1800px;
+    height: 100px;
+    background: yellow;
+}
+
+.caixa-grande{
+  position: relative;
+  margin: 0 auto;
+  top:206px;
+  height: 250px;
+  width: 250px;
+  background-color: blue;
+  transition: 2s;
+}
+
+.caixa-grande:hover{
+transform: rotate(360deg);
+
+}
+.caixa-menor{
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  background-color: aqua;
+}
+
+#c1{
+  bottom: 279px;
+  left: -153px;
+}
+#c2{
+  bottom: 278px;
+  right: -152px;
+}
+#c3{
+    bottom: 101px;
+    right: 95px;
+}
+#c4{
+  bottom: -81px;
+  left: -151px;
+}
+#c5{
+  bottom: -82px;
+  left : 350px;
+}

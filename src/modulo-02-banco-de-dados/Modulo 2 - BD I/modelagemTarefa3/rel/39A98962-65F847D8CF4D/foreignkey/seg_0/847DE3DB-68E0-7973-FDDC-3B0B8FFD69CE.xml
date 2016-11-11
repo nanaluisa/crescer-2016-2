@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="847DE3DB-68E0-7973-FDDC-3B0B8FFD69CE" containerWithKeyObject="6FD899D5-551D-BE16-4D70-3B35808EB5AC" localFKIndex="CC8E487E-F1A6-5767-1DC3-326A5531F8E0" name="Candidatos_Cidade_FK">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:34:17 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>1E9DB117-DFB3-B9A5-3FA7-2B931395FF9F</referredTableID>
+<keyObject>0C2DDE31-8B29-6D8B-278A-4D1413393145</keyObject>
+<referredKeyID>0C2DDE31-8B29-6D8B-278A-4D1413393145</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

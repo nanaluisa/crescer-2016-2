@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="1E9DB117-DFB3-B9A5-3FA7-2B931395FF9F" name="Cidade">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:30:14 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<ordsAlias>table_6</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="IDCidade" id="30B8FB8D-35F7-1F95-38BE-7DD680E6FD31">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:31:04 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Nome" id="C762884A-3372-C154-AFD3-52944318FFD3">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:31:04 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0C2DDE31-8B29-6D8B-278A-4D1413393145" name="Cidade_PK">
+<createdBy>anna.silva</createdBy>
+<createdTime>2016-10-18 19:31:04 UTC</createdTime>
+<ownerDesignName>modelagemTarefa3</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="30B8FB8D-35F7-1F95-38BE-7DD680E6FD31"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

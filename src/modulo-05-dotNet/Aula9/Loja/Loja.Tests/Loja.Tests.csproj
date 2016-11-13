@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Mocks\ProdutoRepositorioMock.cs" />
     <Compile Include="Mocks\ServicoDeCriptografiaMock.cs" />
     <Compile Include="Mocks\UsuarioRepositorioMock.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

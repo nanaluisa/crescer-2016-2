@@ -19,8 +19,9 @@ namespace Marvelflix
 
             bundles.Add(new ScriptBundle("~/bundles/handlebars").Include(
                "~/Scripts/handlebars.js"));
-            //aqui todos js de tela e depois é feito empacotamento somente do que será usado na conexão.
+
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                "~/Scripts/app/herois.js",
                 "~/Scripts/app/telaPrincipal.js",
                 "~/Scripts/app/telaLogin.js",
                 "~/Scripts/app/marvelflix.js",
@@ -37,6 +38,7 @@ namespace Marvelflix
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                  "~/Content/bootstrap.css",
+                 "~/Content/Loader.css",
                  "~/Content/Site.css"));
         }
     }

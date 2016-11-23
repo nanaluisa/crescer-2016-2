@@ -73,6 +73,10 @@ namespace LojaDeItens.Dominio.ItemMagico
 
                 itemSalvo.DataUltimaAtualizacao = DateTime.Now;
                 itemSalvo.Nome = item.Nome;
+                itemSalvo.Descricao = item.Descricao;
+                itemSalvo.Preco = item.Preco;
+                itemSalvo.Estoque = item.Estoque;
+                
                 itemSalvo.Raro = item.Raro;
                 //...
                 this.itemMagicoRepositorio.Atualizar(itemSalvo);

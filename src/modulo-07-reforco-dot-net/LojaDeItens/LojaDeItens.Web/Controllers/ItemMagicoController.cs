@@ -44,7 +44,14 @@ namespace LojaDeItens.Web.Controllers
         [ValidateAntiForgeryToken]
         public JsonResult Salvar(ItemParaEdicaoViewModel model)
         {
-            return Json(new { Mensagem = "Cadastro efetuado com sucesso." }, JsonRequestBehavior.AllowGet);
+            if (ModelState.IsValid)
+            {
+                return Json(new { Mensagem = "Cadastro efetuado com sucesso." }, JsonRequestBehavior.AllowGet);
+            }
+           else
+            {
+                return Json(new { Mensagem = "Erro ao cadastrar." }, JsonRequestBehavior.AllowGet);
+            }
         }
 
         [HttpPost]

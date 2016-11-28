@@ -1,5 +1,7 @@
 package br.com.cwi.crescer.aula1;
 //import java.util.Scanner;
+import java.text.Normalizer;
+import static java.text.Normalizer.Form.NFD;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -9,100 +11,69 @@ import java.util.Date;
 public class StringRun {
     public static void main(String[] args) {
         
-        
-        
-        //System.out.println(new SimpleDateFormat("dd/MM/yyyy").new Date());
-        
-    SimpleDateFormat formatarData = new SimpleDateFormat("dd-MM-yyyy");
-    Date dataAtual = new Date();
-    String data = formatarData.format(dataAtual);
-    System.out.println("Data Atual: " + data);    
-        
-    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-    Date dataAtualEHora = new Date();
-    String dataHora = simpleDateFormat.format(dataAtualEHora);
-    System.out.println("Data e Hora Atual: " + dataHora);
-        
+        SimpleDateFormat formatarData = new SimpleDateFormat("dd-MM-yyyy");
+        Date dataAtual = new Date();
+        String data = formatarData.format(dataAtual);
+        System.out.println("Data Atual: " + data);    
+
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        Date dataAtualEHora = new Date();
+        String dataHora = simpleDateFormat.format(dataAtualEHora);
+        System.out.println("Data e Hora Atual: " + dataHora);
     
-        
-        
-//        String inputTimeStamp = "2012/07/19 09:49:00 - GMT -08:00";
-//        java.text.SimpleDateFormat dateformate= new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-//        effDate = dateformate.parse(inputTimeStamp);
-        
-               
-       // System.out.println("Data e Hora atual: " +c.getTime().simpleDateFormat);
-        
-         
-//        estadosDoBrasil();
-//        
-//        String frase;
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Digite uma frase:  " + scanner.nextLine());
-          
+    }  
+ //--------------  Exemplo MeuString Util   --------------------------
+
+    private static final String MARKS = "\\p{InCombiningDiacriticalMarks}+";
+    private static final String VOGAIS = "[aeiou]";
+
+    private String normalizer(final String string) {
+        return Normalizer.normalize(string, NFD).replaceAll(MARKS, "");
     }
-    
-    //Terminar
-    //Solicitar que o usuário informe um frase, e retorna a quantidade de vogais.
-//    public void quantidadeDeVogais(String frase){
-//        int cont =0;
-//        frase.replace("e", "a");
-//        frase.replace("i", "a");
-//        frase.replace("o", "a");
-//        frase.replace("u", "a");
-//        return 0;
-//    }
 
-//    public void retornaPalavraInvertida(){
-//    }
-//    static void estadosDoBrasil(){
-//        new StringBuilder(estados + ",").append(estados);
-//        Estados[] estados = Estados.values();
-//        
-//     for(int i =0; i < estados.length; i++){
-//         
-//         
-//         
-//     }
-        
-        
-//    Exibir na console a data atual do sistema.
-//    Informe a data de nascimento e devolva o dia da semana.
-    
-    
-    
-    public static void semanaDataNascimento(String data){
-         //Informe a data de nascimento e devolva o dia da semana.   
-        //System.out.println("Digite sua data de Nascimento: " + data);
-        
-        //SimpleDateFormat.parse(data);
-        
-        
-        
+    /**
+     * Recebe uma string e conta quantas vogais existem nela.
+     *
+     * @param string
+     * @return int
+     */
+    public int contaVogais(final String string) {
+        final String stringLower = string.toLowerCase();
+        return stringLower.length() - stringLower.replaceAll(VOGAIS, "").length();
     }
-    
-		
-	
 
+    /**
+     * Recebe uma string e a inverte.
+     *
+     * @param string
+     * @return string
+     */
+    public String inverteString(final String string) {
+        return new StringBuilder(string).reverse().toString();
+    }
 
+    /**
+     * Recebe uma string e valida se a mesma está nula ou em branco.
+     *
+     * @param string
+     * @return true or false
+     */
+    public boolean isEmpty(final String string) {
+        return string == null || string.trim().isEmpty();
+    }
 
-
-
+    /**
+     * Recebe uma string e verifica se a mesma é um palindromo.
+     *
+     * @param string
+     * @return true or false
+     */
+    public boolean isPalindromo(final String string) {
+        if (!isEmpty(string)) {
+            final String stringNormalizer = normalizer(string).replaceAll("\\s", "");
+            return stringNormalizer.equalsIgnoreCase(inverteString(stringNormalizer));
+        }
+        return false;
+    }
 
 }
-    
-
-    
-    
-    
-    
-    
-    
-    
-//        if ("A".compareTo(new String("A"))==0) {
-//            System.out.println("0");
-//        } else {
-//            System.out.println("1");
-//        }
-  
-

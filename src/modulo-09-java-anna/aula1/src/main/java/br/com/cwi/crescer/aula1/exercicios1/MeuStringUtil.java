@@ -1,7 +1,9 @@
-package br.com.cwi.crescer.exercicios1;
-
+package br.com.cwi.crescer.aula1.exercicios1;
 import java.text.Normalizer;
 
+/**
+ * @author ANNA LUISA
+ */
 /**
  *Classe MeuStringUtil que tem as definições abaixo:
    * Possui um metodo que valide se String é vazia.
@@ -14,20 +16,22 @@ import java.text.Normalizer;
  */
 public class MeuStringUtil {
     
-    public static boolean validaString (String algo){
+    public boolean validaString (String algo){
         return algo.isEmpty();
+        //outra forma:
+        //return algo == null || algo.trim().isEmpty();
     }
     
-    public static int numeroDeVogais(final String palavra){
+    public int numeroDeVogais(final String palavra){
         return palavra.toLowerCase().length() - palavra.toLowerCase().replaceAll("[aeiou]", "").length(); 
     }
     
     
-    public static String invertePalavra(final String palavra){
+    public String invertePalavra(final String palavra){
          return new StringBuilder(palavra).reverse().toString(); 
     } 
    
-    public static void verificaPolindromo(final String fraseOriginal){
+    public void verificaPolindromo(final String fraseOriginal){
         
         String frase = fraseOriginal.toLowerCase().replaceAll("\\s+", "");//tirar os espaços
         frase = normalize(frase); //tirar os acentos
@@ -39,25 +43,33 @@ public class MeuStringUtil {
             }else{
                 System.out.println("Não é um palíndromo! ");
             }
+            
+            /* outra forma de escrever o método.
+            public boolean isPalindromo(final String string) {
+                if (!isEmpty(string)) {
+                    final String stringNormalizer = normalizer(string).replaceAll("\\s", "");
+                    return stringNormalizer.equalsIgnoreCase(inverteString(stringNormalizer));
+                }
+                return false;
+            }
+            */
        
     }
     
-    //retirar acentiação
-     private static String normalize(String nome) { 
+    //retirar acentuação
+    private String normalize(String nome) { 
         return Normalizer.normalize(nome, Normalizer.Form.NFD).replaceAll("\\p{InCombiningDiacriticalMarks}+", ""); 
     }
     
-    
+    //Menu. Finalizar.
     public static void main (String[] args){
         
-        System.out.println("");
-                
+        System.out.println("Validação de Strings: ");
+        //validarString(input.nextLine());
+        
                 
     
     } 
     
     
 }
-    
-    
-

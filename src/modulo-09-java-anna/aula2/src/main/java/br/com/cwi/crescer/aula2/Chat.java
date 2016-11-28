@@ -3,7 +3,7 @@ package br.com.cwi.crescer.aula2;
 /**
  * @author Carlos H. Nonnemacher
  */
-import br.com.cwi.crescer.exercicios1.MeuStringUtil;
+import br.com.cwi.crescer.aula1.exercicios1.MeuStringUtil;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;

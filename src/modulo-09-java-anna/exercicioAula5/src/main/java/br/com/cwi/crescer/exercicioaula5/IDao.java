@@ -5,13 +5,17 @@
  */
 package br.com.cwi.crescer.exercicioaula5;
 
+import java.util.List;
+
 /**
  *
  * @author anna.silva
+ * @param <T>
+ * @param <ID>
  */
-class Ator{
+public interface IDao<T, ID> {
+
+    void insert(T t);
     
-    private String nome;
-    
-    
+    List<T> findAll();
 }

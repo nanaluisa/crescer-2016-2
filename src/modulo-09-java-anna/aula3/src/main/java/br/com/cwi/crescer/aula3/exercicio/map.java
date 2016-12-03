@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Mapear as entidades conforme modelo db.sql da aula3.
+ * Criar um DAO que implement um interfaces crud(Insert, Delete, Update, List), similar a da aula mas com um update, 
+    o list é igual ao findAll.
+ * Criar um exportador em CSV para cada entidade criada.
  */
 package br.com.cwi.crescer.aula3.exercicio;
 
@@ -10,5 +11,6 @@ package br.com.cwi.crescer.aula3.exercicio;
  * @author ANNA LUISA
  */
 public class map {
+    
     
 }

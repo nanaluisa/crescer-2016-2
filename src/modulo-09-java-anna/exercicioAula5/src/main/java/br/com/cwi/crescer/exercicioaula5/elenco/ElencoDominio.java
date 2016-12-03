@@ -3,17 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.cwi.crescer.exercicioaula5;
-
-import java.util.List;
+package br.com.cwi.crescer.exercicioaula5.elenco;
 
 /**
  *
  * @author anna.silva
  */
-class Elenco {
-    
-    private String nome;
-    private List<Ator> atores;
+public class ElencoDominio {
     
 }

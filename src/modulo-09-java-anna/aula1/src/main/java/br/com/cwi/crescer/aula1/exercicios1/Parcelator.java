@@ -1,7 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/* Classe Parcelator, para calcular juros(SIMPLES) e parcelas.
+ * Recebe o valor, a taxa de juros, o nº de parcelas(messes) e a data do 1º vencimento.
+ * Retorna os valores e datas das parcelas. Ex. valor: 1000 juros: 10%, parcelas: 10 data: 30/06/2016
+    30/06/2016 - R$ 110,00
+    31/07/2016 - R$ 110,00
+    30/08/2016 - R$ 110,00 ...
  */
 package br.com.cwi.crescer.aula1.exercicios1;
 
@@ -21,6 +23,11 @@ import java.util.Map;
  */
 
 public final class Parcelator {
+    //Menu.Finalizar.
+    public static void main(String[] args) {
+        System.out.println("PARCELATOR...");
+    }
+    
 //Exemplos e Correção em aula.
     private static final String PATTERN = "dd/MM/yyyy";
     private static final DateFormat DATE_FORMAT = new SimpleDateFormat(PATTERN);

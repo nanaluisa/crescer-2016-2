@@ -19,9 +19,10 @@ import java.util.Date;
  */
 public class MeuCalendarioUtil {
     
+    //Menu. Finalizar.
     public static void main(String[] args) {
         System.out.println("Meu Calendário Util");
-        System.out.println("Então, era isso que tinha de exibir....");
+       
     }
     
     public void diaDaSemanaDoNascimento(String data) throws ParseException{

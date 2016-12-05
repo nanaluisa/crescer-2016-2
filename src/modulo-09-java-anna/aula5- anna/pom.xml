@@ -7,7 +7,7 @@
     <version>1.0.0.0</version>
     <packaging>war</packaging>
 
-    <name>aula5</name>
+    <name>aula5-anna</name>
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>

@@ -1,15 +1,14 @@
-package br.com.cwi.crescer.aula8;
+package br.com.cwi.crescer.aula8.dto;
 
 import java.util.Date;
 
 /**
- *
- * @author anna.silva
+ * @author Carlos H. Nonnemacher
  */
-public class Pessoa {
-    
-    private String nome;
-    private Date nascimento;
+public class PessoaDto {
+
+    String nome;
+    Date nascimento;
 
     public String getNome() {
         return nome;
@@ -26,7 +25,5 @@ public class Pessoa {
     public void setNascimento(Date nascimento) {
         this.nascimento = nascimento;
     }
-    
-    
-    
+
 }
